@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Video Button
  */
-class Xhub_VideoPopup extends Widget_Base{
+class xConnect_VideoPopup extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_VideoPopup extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Video Button', 'xhub' );
+		return __( 'XP Video Button', 'xconnect' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_VideoPopup extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_xconnect' ];
 	}
 
 	protected function register_controls() {
@@ -33,26 +33,26 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Button', 'xhub' ),
+				'label' => __( 'Button', 'xconnect' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'xconnect' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'xconnect' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'xconnect' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'xconnect' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -66,16 +66,16 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'vlink',
 			[
-				'label' => __( 'Video Link', 'xhub' ),
+				'label' => __( 'Video Link', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'https://your-link.com', 'xhub' ),
+				'placeholder' => __( 'https://your-link.com', 'xconnect' ),
 			]
 		);
 
 		$this->add_control(
 			'caption',
 			[
-				'label' => __( 'Caption', 'xhub' ),
+				'label' => __( 'Caption', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
 			]
 		);
@@ -83,10 +83,10 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'animate',
 			[
-				'label' => __( 'Animation', 'xhub' ),
+				'label' => __( 'Animation', 'xconnect' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'xhub' ),
-				'label_off' => __( 'No', 'xhub' ),
+				'label_on' => __( 'Yes', 'xconnect' ),
+				'label_off' => __( 'No', 'xconnect' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -98,7 +98,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Button', 'xhub' ),
+				'label' => __( 'Button', 'xconnect' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -107,7 +107,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_width',
 			[
-				'label' => __( 'Size', 'xhub' ),
+				'label' => __( 'Size', 'xconnect' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -123,7 +123,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_size',
 			[
-				'label' => __( 'Icon Size', 'xhub' ),
+				'label' => __( 'Icon Size', 'xconnect' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -142,14 +142,14 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'xhub' ),
+				'label' => __( 'Normal', 'xconnect' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_border_color',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -172,7 +172,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_bg',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -183,7 +183,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_circle',
 			[
-				'label' => __( 'Animation Color', 'xhub' ),
+				'label' => __( 'Animation Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,14 +200,14 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'xhub' ),
+				'label' => __( 'Hover', 'xconnect' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_hover_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -219,7 +219,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn__hover_border_color',
 			[
-				'label' => __( 'Border Color', 'xhub' ),
+				'label' => __( 'Border Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -230,7 +230,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_bg',
 			[
-				'label' => __( 'Background Color', 'xhub' ),
+				'label' => __( 'Background Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -241,7 +241,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_circle',
 			[
-				'label' => __( 'Animation Color', 'xhub' ),
+				'label' => __( 'Animation Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -262,7 +262,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'caption_section',
 			[
-				'label' => __( 'Caption', 'xhub' ),
+				'label' => __( 'Caption', 'xconnect' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'caption!'  => ''
@@ -273,7 +273,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'caption_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -291,7 +291,7 @@ class Xhub_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'caption_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'xconnect' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -329,5 +329,5 @@ class Xhub_VideoPopup extends Widget_Base{
 	}
 
 }
-// After the Xhub_VideoPopup class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_VideoPopup() );
+// After the xConnect_VideoPopup class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new xConnect_VideoPopup() );

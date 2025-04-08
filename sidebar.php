@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Xhub
+ * @package xConnect
  */
 
-if ( xhub_get_layout() === 'full-content' ) {
+if ( xconnect_get_layout() === 'full-content' ) {
 	return;
 }
 

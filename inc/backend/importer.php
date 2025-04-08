@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package Xhub
+ * @package xConnect
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function xhub_importer() {
+function xconnect_importer() {
 	return array(
 		array(
 			'name'       => 'Main Demo (all layout)',
@@ -36,4 +36,4 @@ function xhub_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'xhub_importer', 30 );
+add_filter( 'soo_demo_packages', 'xconnect_importer', 30 );

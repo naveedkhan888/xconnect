@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Contact Info
  */
-class Xhub_CountDown extends Widget_Base{
+class xConnect_CountDown extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Xhub_CountDown extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP CountDown', 'xhub' );
+		return __( 'XP CountDown', 'xconnect' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Xhub_CountDown extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_xhub' ];
+		return [ 'category_xconnect' ];
 	}
 
 	protected function register_controls() {
@@ -32,30 +32,30 @@ class Xhub_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'CountDown', 'xhub' ),
+				'label' => __( 'CountDown', 'xconnect' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'xhub' ),
+				'label' => __( 'Alignment', 'xconnect' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'xhub' ),
+						'title' => __( 'Left', 'xconnect' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'xhub' ),
+						'title' => __( 'Center', 'xconnect' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'xhub' ),
+						'title' => __( 'Right', 'xconnect' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'xhub%s-align-',
+				// 'prefix_class' => 'xconnect%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -67,16 +67,16 @@ class Xhub_CountDown extends Widget_Base{
 			[
 				'label' => 'Date - Time',
 				'type' => Controls_Manager::DATE_TIME,
-				'default' => __( '2025-10-26 12:00', 'xhub' ),
+				'default' => __( '2025-10-26 12:00', 'xconnect' ),
 			]
 		);
 
 		$this->add_control(
 			'zone',
 			[
-				'label' => __( 'UTC Timezone Offset', 'xhub' ),
+				'label' => __( 'UTC Timezone Offset', 'xconnect' ),
 				'type' => Controls_Manager::NUMBER,
-				'default' => __( '0', 'xhub' ),
+				'default' => __( '0', 'xconnect' ),
 			]
 		);
 
@@ -85,39 +85,39 @@ class Xhub_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'One', 'xhub' ),
+				'label' => __( 'One', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'day',
 			[
-				'label' => __( 'Day', 'xhub' ),
+				'label' => __( 'Day', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Day', 'xhub' ),
+				'default' => __( 'Day', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'hour',
 			[
-				'label' => __( 'Hour', 'xhub' ),
+				'label' => __( 'Hour', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hour', 'xhub' ),
+				'default' => __( 'Hour', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'min',
 			[
-				'label' => __( 'Minute', 'xhub' ),
+				'label' => __( 'Minute', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minute', 'xhub' ),
+				'default' => __( 'Minute', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'second',
 			[
-				'label' => __( 'Second', 'xhub' ),
+				'label' => __( 'Second', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Second', 'xhub' ),
+				'default' => __( 'Second', 'xconnect' ),
 			]
 		);
 
@@ -126,39 +126,39 @@ class Xhub_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Multi', 'xhub' ),
+				'label' => __( 'Multi', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'days',
 			[
-				'label' => __( 'Days', 'xhub' ),
+				'label' => __( 'Days', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Days', 'xhub' ),
+				'default' => __( 'Days', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'hours',
 			[
-				'label' => __( 'Hours', 'xhub' ),
+				'label' => __( 'Hours', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hours', 'xhub' ),
+				'default' => __( 'Hours', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'mins',
 			[
-				'label' => __( 'Minutes', 'xhub' ),
+				'label' => __( 'Minutes', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minutes', 'xhub' ),
+				'default' => __( 'Minutes', 'xconnect' ),
 			]
 		);
 		$this->add_control(
 			'seconds',
 			[
-				'label' => __( 'Seconds', 'xhub' ),
+				'label' => __( 'Seconds', 'xconnect' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Seconds', 'xhub' ),
+				'default' => __( 'Seconds', 'xconnect' ),
 			]
 		);
 
@@ -171,7 +171,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'xhub' ),
+				'label' => __( 'Style', 'xconnect' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -180,7 +180,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'xhub' ),
+				'label' => __( 'Number', 'xconnect' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -188,7 +188,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,7 +206,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->add_responsive_control(
 			'number_space',
 			[
-				'label' => __( 'Spacing', 'xhub' ),
+				'label' => __( 'Spacing', 'xconnect' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -224,7 +224,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_titles',
 			[
-				'label' => __( 'Texts', 'xhub' ),
+				'label' => __( 'Texts', 'xconnect' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -233,7 +233,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -253,7 +253,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_sepe',
 			[
-				'label' => __( 'Seperator', 'xhub' ),
+				'label' => __( 'Seperator', 'xconnect' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -261,7 +261,7 @@ class Xhub_CountDown extends Widget_Base{
 		$this->add_control(
 			'sepe_color',
 			[
-				'label' => __( 'Color', 'xhub' ),
+				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -295,5 +295,5 @@ class Xhub_CountDown extends Widget_Base{
 	}
 
 }
-// After the Xhub_CountDown class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Xhub_CountDown() );
+// After the xConnect_CountDown class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new xConnect_CountDown() );

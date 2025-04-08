@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Button with Icon
  */
-class Xhub_Button extends Widget_Base {
+class xConnect_Button extends Widget_Base {
 
     public function get_name() {
         return 'ibutton';
     }
 
     public function get_title() {
-        return __( 'XP Button', 'xhub' );
+        return __( 'XP Button', 'xconnect' );
     }
 
     public function get_icon() {
@@ -20,15 +20,15 @@ class Xhub_Button extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_xhub' ];
+        return [ 'category_xconnect' ];
     }
 
     public static function get_button_color() {
         return [
-            'main'   => __( 'Main Color', 'xhub' ),
-            'dark'   => __( 'Dark Color', 'xhub' ),
-            'light'  => __( 'Light Color', 'xhub' ),
-            'border' => __( 'Border Color', 'xhub' ),
+            'main'   => __( 'Main Color', 'xconnect' ),
+            'dark'   => __( 'Dark Color', 'xconnect' ),
+            'light'  => __( 'Light Color', 'xconnect' ),
+            'border' => __( 'Border Color', 'xconnect' ),
         ];
     }
 
@@ -37,30 +37,30 @@ class Xhub_Button extends Widget_Base {
         $this->start_controls_section(
             'button_section',
             [
-                'label' => __( 'Button', 'xhub' ),
+                'label' => __( 'Button', 'xconnect' ),
             ]
         );
 
         $this->add_responsive_control(
             'align',
             [
-                'label' => __( 'Alignment', 'xhub' ),
+                'label' => __( 'Alignment', 'xconnect' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __( 'Left', 'xhub' ),
+                        'title' => __( 'Left', 'xconnect' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'xhub' ),
+                        'title' => __( 'Center', 'xconnect' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'xhub' ),
+                        'title' => __( 'Right', 'xconnect' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                     'justify' => [
-                        'title' => __( 'Justify', 'xhub' ),
+                        'title' => __( 'Justify', 'xconnect' ),
                         'icon' => 'eicon-text-align-justify',
                     ],
                 ],
@@ -72,7 +72,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'btn_style',
             [
-                'label' => __( 'Style Color', 'xhub' ),
+                'label' => __( 'Style Color', 'xconnect' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'main',
                 'options' => self::get_button_color(),
@@ -83,9 +83,9 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'text',
             [
-                'label' => __( 'Label', 'xhub' ),
+                'label' => __( 'Label', 'xconnect' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Click here', 'xhub' ),
+                'default' => __( 'Click here', 'xconnect' ),
                 'dynamic' => [
                     'active' => true,
                 ],
@@ -96,7 +96,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'selected_icon',
             [
-                'label' => __( 'Icon', 'xhub' ),
+                'label' => __( 'Icon', 'xconnect' ),
                 'type' => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
                 'skin' => 'inline',
@@ -107,12 +107,12 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'icon_position',
             [
-                'label' => __( 'Icon Position', 'xhub' ),
+                'label' => __( 'Icon Position', 'xconnect' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'left',
                 'options' => [
-                    'left' => __( 'Before', 'xhub' ),
-                    'right' => __( 'After', 'xhub' ),
+                    'left' => __( 'Before', 'xconnect' ),
+                    'right' => __( 'After', 'xconnect' ),
                 ],
                 'condition' => [
                     'selected_icon[value]!' => '',
@@ -123,7 +123,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'icon_spacing',
             [
-                'label' => __( 'Icon Spacing', 'xhub' ),
+                'label' => __( 'Icon Spacing', 'xconnect' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -143,9 +143,9 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'link',
             [
-                'label' => __( 'Link', 'xhub' ),
+                'label' => __( 'Link', 'xconnect' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'xhub' ),
+                'placeholder' => __( 'https://your-link.com', 'xconnect' ),
                 'default' => [
                     'url' => '#',
                 ],
@@ -161,7 +161,7 @@ class Xhub_Button extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'General', 'xhub' ),
+                'label' => __( 'General', 'xconnect' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -181,7 +181,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'button_radius',
             [
-                'label' => __( 'Border Radius', 'xhub' ),
+                'label' => __( 'Border Radius', 'xconnect' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
@@ -202,7 +202,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'icon_size',
             [
-                'label' => __( 'Icon Size', 'xhub' ),
+                'label' => __( 'Icon Size', 'xconnect' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -226,14 +226,14 @@ class Xhub_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_normal',
             [
-                'label' => __( 'Normal', 'xhub' ),
+                'label' => __( 'Normal', 'xconnect' ),
             ]
         );
 
         $this->add_control(
             'button_text_color',
             [
-                'label' => __( 'Text Color', 'xhub' ),
+                'label' => __( 'Text Color', 'xconnect' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -246,7 +246,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'btn_bg',
             [
-                'label' => __( 'Background Color', 'xhub' ),
+                'label' => __( 'Background Color', 'xconnect' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -267,14 +267,14 @@ class Xhub_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_hover',
             [
-                'label' => __( 'Hover', 'xhub' ),
+                'label' => __( 'Hover', 'xconnect' ),
             ]
         );
 
         $this->add_control(
             'hover_color',
             [
-                'label' => __( 'Text Color', 'xhub' ),
+                'label' => __( 'Text Color', 'xconnect' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -286,7 +286,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'button_background_hover_color',
             [
-                'label' => __( 'Background Color', 'xhub' ),
+                'label' => __( 'Background Color', 'xconnect' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -297,7 +297,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'border_hover_color',
             [
-                'label' => __( 'Border Color', 'xhub' ),
+                'label' => __( 'Border Color', 'xconnect' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'border-color: {{VALUE}};',
@@ -308,7 +308,7 @@ class Xhub_Button extends Widget_Base {
         $this->add_control(
             'hover_animation',
             [
-                'label' => __( 'Hover Animation', 'xhub' ),
+                'label' => __( 'Hover Animation', 'xconnect' ),
                 'type' => Controls_Manager::HOVER_ANIMATION,
             ]
         );
@@ -364,4 +364,4 @@ class Xhub_Button extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new Xhub_Button() );
+Plugin::instance()->widgets_manager->register( new xConnect_Button() );
