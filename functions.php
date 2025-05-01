@@ -73,7 +73,7 @@ if ( ! function_exists( 'xconnect_setup' ) ) :
 		) );
 
 		/* Add image sizes */
-		add_image_size( 'xconnect-post-thumbnail-grid', 600, 400, array( 'center', 'center' ) );
+		add_image_size( 'xconnect-post-thumbnail-grid', 600, 600, array( 'center', 'center' ) );
 		add_image_size( 'xconnect-portfolio-thumbnail-grid', 600, 600, array( 'center', 'center' ) );
 		add_image_size( 'xconnect-portfolio-thumbnail-grid-wdouble', 1200, 600, array( 'center', 'center' ) );
 		add_image_size( 'xconnect-portfolio-thumbnail-grid-whdouble', 1200, 1200, array( 'center', 'center' ) );
