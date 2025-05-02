@@ -1102,7 +1102,7 @@ function xconnect_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Primary Color', 'xconnect' ),
             'section'  => 'color_scheme',
-            'default'  => '#C19977',
+            'default'  => '#e41e26',
             'priority' => 10,
         ),
         'heading_color'   => array(

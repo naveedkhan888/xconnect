@@ -132,7 +132,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#e41e26',
 				'condition' => [
 					'bar_style' => 'circle',
 				]
@@ -181,7 +181,7 @@ class xConnect_Progress_Bars extends Widget_Base{
 			[
 				'label' => __( 'Color', 'xconnect' ),
 				'type' => Controls_Manager::COLOR,
-				'default' => '#C19977',
+				'default' => '#e41e26',
 				'selectors' => [
 					'{{WRAPPER}} .progress-bar' => 'background: {{VALUE}};',
 				],
