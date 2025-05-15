@@ -3585,7 +3585,7 @@ object {
 }
 .xp-heading > span.is_highlight {
   background: #e41e26;
-  padding: 2px 10px;
+  padding: 5px 20px;
   border: 1px solid #e41e26;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
