@@ -28,7 +28,8 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 			.xptf-btn.xptf-btn-light, 
-			.xptf-btn.xptf-btn-border, 
+			.xptf-btn.xptf-btn-border,
+			.xptf-btn.xptf-btn-border:visited,
 			.xptf-btn-light:hover, 
 			.xptf-btn-light:focus, 
 			.xptf-btn, 
@@ -46,6 +47,8 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 
 			.xptf-btn-dark, 
+			.xptf-btn.xptf-btn-light:hover, 
+			.xptf-btn.xptf-btn-light:visited, 
 			.xptf-btn:hover{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
@@ -107,6 +110,10 @@ if(!function_exists('xconnect_color_scheme')){
 			.owl-carousel .owl-dots button.owl-dot.active span,
 			.owl-carousel .owl-dots button.owl-dot:hover span,
 			.owl-carousel .owl-nav button.owl-prev:hover,.owl-carousel .owl-nav button.owl-next:hover,
+			.xptf-btn,
+			.xptf-btn-dark:hover, .xptf-btn-dark:focus,
+			.xptf-btn-light:hover, .xptf-btn-light:focus,
+			.xptf-btn.xptf-btn-border:hover, .xptf-btn.xptf-btn-border:focus,
 			.main-navigation > ul > li:before,
 			.post-box .post-cat a,
 			.post-box .btn-play:hover i,
