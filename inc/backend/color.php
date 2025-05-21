@@ -31,6 +31,8 @@ if(!function_exists('xconnect_color_scheme')){
 
 			.xptf-btn.xptf-btn-main:hover, 
 			.xptf-btn.xptf-btn-dark, 
+			.xptf-btn.xptf-btn-light, 
+			.xptf-btn.xptf-btn-border, 
 			button.xptf-btn:hover{ color: '.xconnect_get_option('btn_dark_color').';}
 				';
 		}
@@ -45,6 +47,8 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 			button.xptf-btn, 
 			.xptf-btn.xptf-btn-dark:hover,  
+			.xptf-btn.xptf-btn-light:hover, 
+			.xptf-btn.xptf-btn-border:hover, 
 			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
