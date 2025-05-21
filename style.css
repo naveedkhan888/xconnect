@@ -1002,15 +1002,12 @@ td {
   margin-right: 12px;
   vertical-align: middle;
 }
-.xptf-btn:hover, .xptf-btn:visited {
+.xptf-btn:hover {
   color: #fff;
 }
 
 .xptf-btn-dark {
   background: #1a1b1e;
-}
-.xptf-btn-dark:visited {
-  color: #fff;
 }
 .xptf-btn-dark:hover, .xptf-btn-dark:focus {
   color: #fff;
@@ -1021,9 +1018,7 @@ td {
   background: #fff;
   color: #e41e26;
 }
-.xptf-btn-light:visited {
-  color: #1a1b1e;
-}
+
 .xptf-btn-light:hover, .xptf-btn-light:focus {
   color: #fff;
   background: #e41e26;
@@ -1034,9 +1029,7 @@ td {
   border-color: #e41e26;
   color: #e41e26;
 }
-.xptf-btn.xptf-btn-border:visited {
-  color: #e41e26;
-}
+
 .xptf-btn.xptf-btn-border:hover, .xptf-btn.xptf-btn-border:focus {
   background: #e41e26;
   color: #fff;
@@ -4937,12 +4930,10 @@ object {
 .xp-pricing-table .inner-table .details.no-icon ul li:after {
   display: none;
 }
-.xp-pricing-table .xptf-btn,
-.xp-pricing-table .xptf-btn:visited {
+.xp-pricing-table .xptf-btn {
   color: #1a1b1e;
 }
-.xp-pricing-table .xptf-btn:hover,
-.xp-pricing-table .xptf-btn:visited:hover {
+.xp-pricing-table .xptf-btn:hover {
   color: #fff;
 }
 .xp-pricing-table.is-featured .inner-table {

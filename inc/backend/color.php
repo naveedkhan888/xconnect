@@ -42,10 +42,8 @@ if(!function_exists('xconnect_color_scheme')){
 	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
 			$color_scheme = 
 			'
-			button.xptf-btn, 
-			button.xptf-btn:visited, 
-			.xptf-btn.xptf-btn-main, 
-			.xptf-btn.xptf-btn-main:visited{ color: '.xconnect_get_option('btn_main_color').';}
+			button.xptf-btn,  
+			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
 
