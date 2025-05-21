@@ -27,7 +27,8 @@ if(!function_exists('xconnect_color_scheme')){
 	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
 			$color_scheme = 
 			'
-			.xptf-btn.xptf-btn-light, 
+			.xptf-btn.xptf-btn-light:hover, 
+			.xptf-btn.xptf-btn-light:visited, 
 			.xptf-btn.xptf-btn-border,
 			.xptf-btn.xptf-btn-border:visited,
 			.xptf-btn-light:hover, 
@@ -47,8 +48,7 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 
 			.xptf-btn-dark, 
-			.xptf-btn.xptf-btn-light:hover, 
-			.xptf-btn.xptf-btn-light:visited, 
+			.xptf-btn-dark:visited,  
 			.xptf-btn:hover{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
