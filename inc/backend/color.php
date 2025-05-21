@@ -23,6 +23,35 @@ if(!function_exists('xconnect_color_scheme')){
 			echo '<style type="text/css">'.$color_scheme.'</style>';
 		}
 
+		//Heading Color
+	  	if( xconnect_get_option('btn_main_color') != '#191717' ){
+			$color_scheme = 
+			'
+			.xptf-btn:hover, 
+			.xptf-btn-light:hover, 
+			.xptf-btn-light:focus, 
+			.xptf-btn, 
+			.xptf-btn:visited{ color: '.xconnect_get_option('btn_main_color').';}
+				';
+		}
+
+		if( !empty($color_scheme) ){
+			echo '<style type="text/css">'.$color_scheme.'</style>';
+		}
+
+		//Heading Color
+	  	if( xconnect_get_option('btn_dark_color') != '#191717' ){
+			$color_scheme = 
+			'
+
+			.xptf-btn-dark{ color: '.xconnect_get_option('btn_main_color').';}
+				';
+		}
+
+		if( !empty($color_scheme) ){
+			echo '<style type="text/css">'.$color_scheme.'</style>';
+		}
+
 		//Button Hover and Dark Color
 	  	if( xconnect_get_option('btn_hover_dark') != '#191717' ){
 			$color_scheme = 

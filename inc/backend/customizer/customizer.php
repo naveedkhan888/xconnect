@@ -1120,6 +1120,22 @@ function xconnect_customize_settings() {
             'priority' => 10,
         ),
 
+        'btn_main_color'   => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'Button Main Color', 'xconnect' ),
+            'section'  => 'color_scheme',
+            'default'  => '#BDF49D',
+            'priority' => 10,
+        ),
+
+        'btn_dark_color'   => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'Button Dark Color', 'xconnect' ),
+            'section'  => 'color_scheme',
+            'default'  => '#1F4843',
+            'priority' => 10,
+        ),
+
         /*google atlantic*/
         'js_code'  => array(
             'type'        => 'code',
