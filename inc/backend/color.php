@@ -49,11 +49,11 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 			button.xptf-btn, 
-			.woocommerce-mini-cart__buttons a.button.checkout:hover, 
 			.xptf-btn.xptf-btn-dark:hover,  
 			.xptf-btn.xptf-btn-light:hover, 
 			.xptf-btn.xptf-btn-border:hover, 
-			.woocommerce-mini-cart__buttons a.button.wc-forward, 
+			.woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward, 
+			.woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward:hover, 
 			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
