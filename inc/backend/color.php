@@ -31,8 +31,8 @@ if(!function_exists('xconnect_color_scheme')){
 
 			.xptf-btn.xptf-btn-main:hover, 
 			.woocommerce-mini-cart__buttons a.button.wc-forward:hover, 
-			.woocommerce-mini-cart__buttons a.button.checkout.wc-forward, 
-			.woocommerce-mini-cart__buttons a.button.checkout.wc-forward:hover, 
+			p.woocommerce-mini-cart__buttons a.button.checkout.wc-forward, 
+			p.woocommerce-mini-cart__buttons a.button.checkout.wc-forward:hover, 
 			.search-form .search-submit:hover i, 
 			.xptf-btn.xptf-btn-dark, 
 			.xptf-btn.xptf-btn-light, 
