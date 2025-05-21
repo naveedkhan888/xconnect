@@ -33,8 +33,9 @@ if(!function_exists('xconnect_color_scheme')){
 			.xptf-btn.xptf-btn-border:visited,
 			.xptf-btn-light:hover, 
 			.xptf-btn-light:focus, 
-			.xptf-btn, 
-			.xptf-btn:visited{ color: '.xconnect_get_option('btn_main_color').';}
+			.xptf-btn-dark:visited, 
+			.xptf-btn-dark:hover, 
+			.xptf-btn{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
 
@@ -47,8 +48,8 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 
-			.xptf-btn-dark, 
-			.xptf-btn-dark:visited,  
+			.xptf-btn:visited, 
+			.xptf-btn-dark,  
 			.xptf-btn:hover{ color: '.xconnect_get_option('btn_dark_color').';}
 				';
 		}
