@@ -24,6 +24,26 @@ if(!function_exists('xconnect_color_scheme')){
 		}
 
 
+		
+
+		//Heading Color
+	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
+			$color_scheme = 
+			'
+			button.xptf-btn, 
+			.xptf-btn.xptf-btn-dark:hover,  
+			.xptf-btn.xptf-btn-light:hover, 
+			.xptf-btn.xptf-btn-border:hover, 
+			.woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward, 
+			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
+				';
+		}
+
+		if( !empty($color_scheme) ){
+			echo '<style type="text/css">'.$color_scheme.'</style>';
+		}
+
+
 		//Heading Color
 	  	if( xconnect_get_option('btn_dark_color') != '#1F4843' ){
 			$color_scheme = 
@@ -38,23 +58,6 @@ if(!function_exists('xconnect_color_scheme')){
 			.xptf-btn.xptf-btn-light, 
 			.xptf-btn.xptf-btn-border, 
 			button.xptf-btn:hover{ color: '.xconnect_get_option('btn_dark_color').';}
-				';
-		}
-
-		if( !empty($color_scheme) ){
-			echo '<style type="text/css">'.$color_scheme.'</style>';
-		}
-
-		//Heading Color
-	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
-			$color_scheme = 
-			'
-			button.xptf-btn, 
-			.xptf-btn.xptf-btn-dark:hover,  
-			.xptf-btn.xptf-btn-light:hover, 
-			.xptf-btn.xptf-btn-border:hover, 
-			.woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward, 
-			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
 
