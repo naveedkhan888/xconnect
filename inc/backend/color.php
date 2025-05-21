@@ -24,10 +24,10 @@ if(!function_exists('xconnect_color_scheme')){
 		}
 
 		//Heading Color
-	  	if( xconnect_get_option('btn_main_color') != '#191717' ){
+	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
 			$color_scheme = 
 			'
-			.xptf-btn:hover, 
+			 
 			.xptf-btn-light:hover, 
 			.xptf-btn-light:focus, 
 			.xptf-btn, 
@@ -40,11 +40,12 @@ if(!function_exists('xconnect_color_scheme')){
 		}
 
 		//Heading Color
-	  	if( xconnect_get_option('btn_dark_color') != '#191717' ){
+	  	if( xconnect_get_option('btn_dark_color') != '#1F4843' ){
 			$color_scheme = 
 			'
 
-			.xptf-btn-dark{ color: '.xconnect_get_option('btn_main_color').';}
+			.xptf-btn-dark, 
+			.xptf-btn:hover{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
 
