@@ -49,7 +49,7 @@ if(!function_exists('xconnect_color_scheme')){
 
 			.xptf-btn-dark, 
 			.xptf-btn-dark:visited,  
-			.xptf-btn:hover{ color: '.xconnect_get_option('btn_main_color').';}
+			.xptf-btn:hover{ color: '.xconnect_get_option('btn_dark_color').';}
 				';
 		}
 
