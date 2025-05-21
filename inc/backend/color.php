@@ -31,7 +31,8 @@ if(!function_exists('xconnect_color_scheme')){
 
 			.xptf-btn.xptf-btn-main:hover, 
 			.woocommerce-mini-cart__buttons a.button.wc-forward:hover, 
-			.woocommerce-mini-cart__buttons a.button.checkout, 
+			.woocommerce-mini-cart__buttons a.button.checkout.wc-forward, 
+			.woocommerce-mini-cart__buttons a.button.checkout.wc-forward:hover, 
 			.search-form .search-submit:hover i, 
 			.xptf-btn.xptf-btn-dark, 
 			.xptf-btn.xptf-btn-light, 
@@ -53,7 +54,6 @@ if(!function_exists('xconnect_color_scheme')){
 			.xptf-btn.xptf-btn-light:hover, 
 			.xptf-btn.xptf-btn-border:hover, 
 			.woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward, 
-			.woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward:hover, 
 			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
