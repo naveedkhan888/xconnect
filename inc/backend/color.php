@@ -30,6 +30,7 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 
 			.xptf-btn.xptf-btn-main:hover, 
+			.xptf-btn.xptf-btn-dark, 
 			button.xptf-btn:hover{ color: '.xconnect_get_option('btn_dark_color').';}
 				';
 		}
@@ -42,7 +43,8 @@ if(!function_exists('xconnect_color_scheme')){
 	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
 			$color_scheme = 
 			'
-			button.xptf-btn,  
+			button.xptf-btn, 
+			.xptf-btn.xptf-btn-dark:hover,  
 			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
