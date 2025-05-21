@@ -27,7 +27,8 @@ if(!function_exists('xconnect_color_scheme')){
 	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
 			$color_scheme = 
 			'
-			 
+			.xptf-btn.xptf-btn-light, 
+			.xptf-btn.xptf-btn-border, 
 			.xptf-btn-light:hover, 
 			.xptf-btn-light:focus, 
 			.xptf-btn, 
