@@ -23,19 +23,13 @@ if(!function_exists('xconnect_color_scheme')){
 			echo '<style type="text/css">'.$color_scheme.'</style>';
 		}
 
+
 		//Heading Color
-	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
+	  	if( xconnect_get_option('btn_dark_color') != '#1F4843' ){
 			$color_scheme = 
 			'
-			.xptf-btn.xptf-btn-light:hover, 
-			.xptf-btn.xptf-btn-light:visited, 
-			.xptf-btn.xptf-btn-border,
-			.xptf-btn.xptf-btn-border:visited,
-			.xptf-btn-light:hover, 
-			.xptf-btn-light:focus, 
-			.xptf-btn-dark:visited, 
-			.xptf-btn-dark:hover, 
-			.xptf-btn{ color: '.xconnect_get_option('btn_main_color').';}
+
+			.sdfsdfdf{ color: '.xconnect_get_option('btn_dark_color').';}
 				';
 		}
 
@@ -44,13 +38,10 @@ if(!function_exists('xconnect_color_scheme')){
 		}
 
 		//Heading Color
-	  	if( xconnect_get_option('btn_dark_color') != '#1F4843' ){
+	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
 			$color_scheme = 
 			'
-
-			.xptf-btn:visited, 
-			.xptf-btn-dark,  
-			.xptf-btn:hover{ color: '.xconnect_get_option('btn_dark_color').';}
+			.sdfsdfdf{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
 
