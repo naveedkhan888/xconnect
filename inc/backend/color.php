@@ -29,7 +29,7 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 
-			.sdfsdfdf{ color: '.xconnect_get_option('btn_dark_color').';}
+			.xptf-btn.xptf-btn-main:hover{ color: '.xconnect_get_option('btn_dark_color').';}
 				';
 		}
 
@@ -41,7 +41,8 @@ if(!function_exists('xconnect_color_scheme')){
 	  	if( xconnect_get_option('btn_main_color') != '#BDF49D' ){
 			$color_scheme = 
 			'
-			.sdfsdfdf{ color: '.xconnect_get_option('btn_main_color').';}
+			.xptf-btn.xptf-btn-main, 
+			.xptf-btn.xptf-btn-main:visited{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
 
