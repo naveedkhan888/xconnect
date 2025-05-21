@@ -30,6 +30,9 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 
 			.xptf-btn.xptf-btn-main:hover, 
+			.woocommerce-mini-cart__buttons a.button.wc-forward:hover, 
+			.woocommerce-mini-cart__buttons a.button.checkout, 
+			.search-form .search-submit:hover i, 
 			.xptf-btn.xptf-btn-dark, 
 			.xptf-btn.xptf-btn-light, 
 			.xptf-btn.xptf-btn-border, 
@@ -46,9 +49,11 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 			button.xptf-btn, 
+			.woocommerce-mini-cart__buttons a.button.checkout:hover, 
 			.xptf-btn.xptf-btn-dark:hover,  
 			.xptf-btn.xptf-btn-light:hover, 
 			.xptf-btn.xptf-btn-border:hover, 
+			.woocommerce-mini-cart__buttons a.button.wc-forward, 
 			.xptf-btn.xptf-btn-main{ color: '.xconnect_get_option('btn_main_color').';}
 				';
 		}
