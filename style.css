@@ -4196,7 +4196,7 @@ object {
 ## Image Box
 --------------------------------------------------------------*/
 .border_radious_image img {
-  border-radius: 15px;
+  border-radius: 15px !important;
 }
 .image-box-price .price-box {
   border-radius: 50%;
