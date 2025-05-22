@@ -965,9 +965,9 @@ td {
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
   font-size: 14px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
   padding: 14px 30px;
   line-height: 1.42857143;
   display: inline-block;
@@ -4195,6 +4195,9 @@ object {
 /*--------------------------------------------------------------
 ## Image Box
 --------------------------------------------------------------*/
+.border_radious_image img {
+  border-radius: 15px;
+}
 .image-box-price .price-box {
   border-radius: 50%;
   position: absolute;
