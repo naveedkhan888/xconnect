@@ -7946,9 +7946,9 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -ms-transition: all 0.2s linear;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 #back-to-top.show {
   opacity: 1;
