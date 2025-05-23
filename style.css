@@ -665,9 +665,9 @@ mark, ins {
   height: 38px;
   color: #1a1b1e;
   background: rgba(220, 219, 219, 0.5);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 .btn-details i:before {
   font-size: 16px;
@@ -2220,9 +2220,9 @@ Vertical Menu
   background: #fff;
   margin-bottom: 60px;
   overflow: hidden;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 8px 8px 30px 0 rgba(0, 0, 0, 0.1);
@@ -2452,9 +2452,9 @@ Vertical Menu
   line-height: 40px;
   margin-right: 5px;
   border: 1px solid #e7e7e7;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 .page-pagination li a i:before, .page-pagination li span i:before {
   font-size: 16px;
@@ -3148,9 +3148,9 @@ Vertical Menu
   display: inline-block;
   vertical-align: middle;
   border: 1px solid transparent;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 .widget .tagcloud a:hover {
   background: rgb(193, 153, 119, 0.1);
