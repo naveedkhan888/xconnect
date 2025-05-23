@@ -1055,8 +1055,9 @@ td {
 .woocommerce button.button:disabled[disabled], 
 .woocommerce button.button.alt, 
 .woocommerce button.button, 
+.woocommerce-mini-cart__buttons a.button.wc-forward.wc-forward, 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
-  border-radius: 15px;
+  border-radius: 35px;
 }
 
 .main-form input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
@@ -3376,9 +3377,9 @@ Vertical Menu
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 .author-widget_wrapper .author-widget_image-wrapper {
