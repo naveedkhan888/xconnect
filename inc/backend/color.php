@@ -31,6 +31,8 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 			button.xptf-btn, 
+			.woocommerce button.button:disabled, 
+			.woocommerce button.button:disabled[disabled], 
 			.woocommerce button.button.alt, 
 			.woocommerce button.button, 
 			.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
@@ -53,6 +55,9 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 
 			.xptf-btn.xptf-btn-main:hover, 
+			.woocommerce button.button.alt:hover, 
+			.woocommerce button.button:hover, 
+			.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, 
 			.woocommerce-mini-cart__buttons a.button.wc-forward:hover, 
 			p.woocommerce-mini-cart__buttons a.button.checkout.wc-forward, 
 			p.woocommerce-mini-cart__buttons a.button.checkout.wc-forward:hover, 
