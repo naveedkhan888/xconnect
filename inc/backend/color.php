@@ -31,6 +31,7 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 			button.xptf-btn, 
+			.btn-loadmore.xptf-btn, 
 			.woocommerce button.button:disabled, 
 			.woocommerce button.button:disabled[disabled], 
 			.woocommerce button.button.alt, 
@@ -55,6 +56,7 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 
 			.xptf-btn.xptf-btn-main:hover, 
+			.btn-loadmore.xptf-btn:hover, 
 			.woocommerce button.button.alt:hover, 
 			.woocommerce button.button:hover, 
 			.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, 
