@@ -1051,6 +1051,14 @@ td {
   color: #fff;
 }
 
+.woocommerce button.button:disabled, 
+.woocommerce button.button:disabled[disabled], 
+.woocommerce button.button.alt, 
+.woocommerce button.button, 
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+  border-radius: 15px;
+}
+
 .main-form input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
   color: #1a1b1e;
   opacity: 1;
