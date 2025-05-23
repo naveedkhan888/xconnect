@@ -198,10 +198,3 @@ if ( ! function_exists( 'xconnect_breadcrumbs' ) ) {
         <?php
     }
 }
-
-// Register the shortcode
-function register_xconnect_get_breadcrumbs()
-{
-    add_shortcode('breadcrubs', 'xconnect_get_breadcrumbs');
-}
-add_action('init', 'register_xconnect_get_breadcrumbs');
