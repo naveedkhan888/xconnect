@@ -32,6 +32,7 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 			button.xptf-btn, 
 			#back-to-top, 
+			.search-form .search-submit i, 
 			.btn-loadmore.xptf-btn, 
 			.woocommerce button.button:disabled, 
 			.woocommerce button.button:disabled[disabled], 
