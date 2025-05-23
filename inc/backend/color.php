@@ -31,6 +31,9 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 			button.xptf-btn, 
+			.woocommerce button.button.alt, 
+			.woocommerce button.button, 
+			.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
 			.xptf-btn.xptf-btn-dark:hover,  
 			.xptf-btn.xptf-btn-light:hover, 
 			.xptf-btn.xptf-btn-border:hover, 
