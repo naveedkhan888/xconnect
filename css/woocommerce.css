@@ -209,7 +209,7 @@ WooCommerce styles override
   padding: 6px 9px;
   line-height: 1;
   position: absolute;
-  top: -42px;
+  top: -10px;
   left: -10px;
   right: auto;
   min-height: auto;
@@ -541,6 +541,7 @@ WooCommerce styles override
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
+  border-radius: 15px;
 }
 
 .woocommerce #content table.cart td.actions,
@@ -556,11 +557,12 @@ WooCommerce styles override
 .woocommerce-page table.cart td.actions .input-text,
 .woocommerce form .form-row .input-text, .woocommerce-page form .form-row .input-text {
   width: 300px;
-  padding: 20px;
-  height: 58px;
+  padding: 10px 20px;
+  height: 46px;
   line-height: 47px;
   margin: 0 10px 0 0;
   color: #7e7e7e;
+  border-radius: 15px;
 }
 
 #add_payment_method table.cart td.actions .coupon .input-text,

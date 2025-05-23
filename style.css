@@ -3333,9 +3333,9 @@ Vertical Menu
   height: 48px;
   line-height: 1;
   border-color: #dbdbdb;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 .search-form .search-submit {
@@ -3356,9 +3356,9 @@ Vertical Menu
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -ms-transition: all 0.3s linear;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 .search-form .search-submit i {
   color: #fff;

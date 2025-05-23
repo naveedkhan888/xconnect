@@ -31,6 +31,7 @@ if(!function_exists('xconnect_color_scheme')){
 			$color_scheme = 
 			'
 			button.xptf-btn, 
+			.woocommerce a.button, 
 			#back-to-top, 
 			.search-form .search-submit i, 
 			.btn-loadmore.xptf-btn, 
@@ -58,6 +59,7 @@ if(!function_exists('xconnect_color_scheme')){
 			'
 
 			.xptf-btn.xptf-btn-main:hover, 
+			.woocommerce a.button:hover, 
 			.btn-loadmore.xptf-btn:hover, 
 			.woocommerce button.button.alt:hover, 
 			.woocommerce button.button:hover, 
