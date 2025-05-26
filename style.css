@@ -5459,9 +5459,6 @@ object {
   font-weight: 600;
 }
 
-.project-slider .projects-box .portfolio-info h5 a {
-  
-}
 
 .project-slider .projects-box .portfolio-info h5 a {
   color: #1a1b1e;
@@ -5470,6 +5467,7 @@ object {
   transform: translateX(-101%);
   transition: all 0.3s ease;
   display: inline-block;
+  border-radius: 15px;
 }
 
 .project-slider .projects-box:hover .portfolio-info h5 a {
@@ -5499,6 +5497,7 @@ object {
   transition: all 0.3s ease;
   transition-delay: 50ms;
   transition-duration: 0.3s;
+  border-radius: 15px;
 }
 .project-slider .projects-box:hover .portfolio-info .portfolio-cates a {
   transform: translateX(0);
