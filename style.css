@@ -2054,11 +2054,11 @@ Vertical Menu
   color: #fff;
 }
 .page-header .breadcrumbs li:before {
-  content: "\f143";
-  font-family: "xpcustomicon";
-  font-size: 9px;
+  content: "\f124";
+  font-family: xpicon !important;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
-  margin: -2px 8px 0;
+  margin: -2px 14px 0;
   display: inline-block;
   vertical-align: middle;
 }
@@ -6080,9 +6080,9 @@ object {
   padding: 9px 20px;
   background: #f6f6f6;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
