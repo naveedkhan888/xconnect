@@ -116,7 +116,7 @@ if(!function_exists('xconnect_color_scheme')){
 
 
 	  	//Main Color
-	  	if( xconnect_get_option('main_color') != '#e41e26' ){
+	  	if( xconnect_get_option('main_color') != '#0f3d3a' ){
 			$color_scheme = 
 			'
 		  	/****Main Color****/
