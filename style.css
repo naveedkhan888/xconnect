@@ -1978,6 +1978,7 @@ Vertical Menu
 /* Optional: Add border and separate items */
 .vertical-services-menu li {
     border-bottom: 0;
+    overflow: hidden;
     border-radius: 15px;
     background: rgba(0,0,0,0.03);
     margin: 0 0 10px 0;
