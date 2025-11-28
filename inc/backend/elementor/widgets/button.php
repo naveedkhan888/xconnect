@@ -342,6 +342,8 @@ class xConnect_Button extends Widget_Base {
             $this->add_render_attribute( 'button', 'class', 'elementor-animation-' . $settings['hover_animation'] );
         }
 
+        $this->add_render_attribute( 'button', 'data-hover', $settings['text'] );
+
         ?>
         <div class="xp-button">
             <a <?php echo wp_kses_post($this->get_render_attribute_string( 'button' )); ?>>
