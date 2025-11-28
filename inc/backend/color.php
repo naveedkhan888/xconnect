@@ -2,19 +2,19 @@
 
 
 //Custom Style Frontend
-if(!function_exists('polishe_color_scheme')){
-    function polishe_color_scheme(){
+if(!function_exists('xconnect_color_scheme')){
+    function xconnect_color_scheme(){
 	  	$color_scheme = '';
 
 	  	// Get theme options with fallbacks
-		$primary_color      = polishe_get_option('primary_color', '#e8d4ad');
-		$secondary_color    = polishe_get_option('secondary_color', '#343a20');
-		$text_color         = polishe_get_option('text_color', '#e3e3e3');
-		$accent_color       = polishe_get_option('accent_color', '#262b14');
-		$bg_color           = polishe_get_option('bg_color', '#f4efef');
-		$white_color        = polishe_get_option('white_color', '#FFFFFF');
-		$divider_color      = polishe_get_option('divider_color', '#FFFFFF14');
-		$dark_divider_color = polishe_get_option('dark_divider_color', '#3835373b'); // example fallback
+		$primary_color      = xconnect_get_option('primary_color', '#e8d4ad');
+		$secondary_color    = xconnect_get_option('secondary_color', '#343a20');
+		$text_color         = xconnect_get_option('text_color', '#e3e3e3');
+		$accent_color       = xconnect_get_option('accent_color', '#262b14');
+		$bg_color           = xconnect_get_option('bg_color', '#f4efef');
+		$white_color        = xconnect_get_option('white_color', '#FFFFFF');
+		$divider_color      = xconnect_get_option('divider_color', '#FFFFFF14');
+		$dark_divider_color = xconnect_get_option('dark_divider_color', '#3835373b'); // example fallback
 
 
 		// Ensure variables have values (use fallbacks if empty)
@@ -49,12 +49,12 @@ if(!function_exists('polishe_color_scheme')){
 
     }
 }
-add_action('wp_head', 'polishe_color_scheme');
+add_action('wp_head', 'xconnect_color_scheme');
 
 //Custom Second Font
-if(!function_exists('polishe_second_font')){
-	function polishe_second_font(){
-		$second_font = polishe_get_option( 'second_font', [] );
+if(!function_exists('xconnect_second_font')){
+	function xconnect_second_font(){
+		$second_font = xconnect_get_option( 'second_font', [] );
 		$data_font = '';
 
 		if ( is_array($second_font) && !empty($second_font['font-family']) && $second_font['font-family'] != 'Belleza' ) {
@@ -127,4 +127,4 @@ if(!function_exists('polishe_second_font')){
 		}
 	}
 }
-add_action('wp_head', 'polishe_second_font');
+add_action('wp_head', 'xconnect_second_font');

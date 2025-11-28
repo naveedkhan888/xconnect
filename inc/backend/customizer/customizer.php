@@ -2,7 +2,7 @@
 /**
  * Theme customizer
  *
- * @package Polishe
+ * @package xConnect
  */
 
 // Exit if accessed directly
@@ -17,7 +17,7 @@ add_action('after_setup_theme', function() {
     }
 }, 20);
 
-class Polishe_Customize {
+class xConnect_Customize {
 	/**
 	 * Customize settings
 	 *
@@ -143,18 +143,18 @@ class Polishe_Customize {
  *
  * @return bool|string
  */
-function polishe_get_option( $name ) {
-	global $polishe_customize;
+function xconnect_get_option( $name ) {
+	global $xconnect_customize;
 
 	$value = false;
 
 	if ( class_exists( 'Kirki' ) ) {
-		$value = Kirki::get_option( 'polishe', $name );
-	} elseif ( ! empty( $polishe_customize ) ) {
-		$value = $polishe_customize->get_option( $name );
+		$value = Kirki::get_option( 'xconnect', $name );
+	} elseif ( ! empty( $xconnect_customize ) ) {
+		$value = $xconnect_customize->get_option( $name );
 	}
 
-	return apply_filters( 'polishe_get_option', $value, $name );
+	return apply_filters( 'xconnect_get_option', $value, $name );
 }
 
 /**
@@ -164,14 +164,14 @@ function polishe_get_option( $name ) {
  *
  * @return mixed
  */
-function polishe_get_option_default( $name ) {
-	global $polishe_customize;
+function xconnect_get_option_default( $name ) {
+	global $xconnect_customize;
 
-	if ( empty( $polishe_customize ) ) {
+	if ( empty( $xconnect_customize ) ) {
 		return false;
 	}
 
-	return $polishe_customize->get_option_default( $name );
+	return $xconnect_customize->get_option_default( $name );
 }
 
 /**
@@ -179,12 +179,12 @@ function polishe_get_option_default( $name ) {
  *
  * @param object $wp_customize
  */
-function polishe_customize_modify( $wp_customize ) {
+function xconnect_customize_modify( $wp_customize ) {
 	$wp_customize->get_section( 'title_tagline' )->panel     = 'general';
 	$wp_customize->get_section( 'static_front_page' )->panel = 'general';
 }
 
-add_action( 'customize_register', 'polishe_customize_modify' );
+add_action( 'customize_register', 'xconnect_customize_modify' );
 
 
 /**
@@ -195,27 +195,27 @@ add_action( 'customize_register', 'polishe_customize_modify' );
  *
  * @return array
  */
-function polishe_customize_settings() {
+function xconnect_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'polishe',
+		'theme' => 'xconnect',
 	);
 
 	$panels = array(
 		'general'         => array(
 			'priority'    => 5,
-			'title'       => esc_html__( 'General', 'polishe' ),
+			'title'       => esc_html__( 'General', 'xconnect' ),
         ),
         'blog'        => array(
-			'title'      => esc_html__( 'Blog', 'polishe' ),
+			'title'      => esc_html__( 'Blog', 'xconnect' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         'portfolio'       => array(
-			'title'       => esc_html__( 'Portfolio', 'polishe' ),
+			'title'       => esc_html__( 'Portfolio', 'xconnect' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',			
 		),
@@ -224,34 +224,34 @@ function polishe_customize_settings() {
 	$sections = array(
         /* header */
         'main_header'     => array(
-            'title'       => esc_html__( 'Header', 'polishe' ),
+            'title'       => esc_html__( 'Header', 'xconnect' ),
             'description' => '',
             'priority'    => 8,
             'capability'  => 'edit_theme_options',
         ),
         /* page header */
         'page_header'     => array(
-            'title'       => esc_html__( 'Page Header', 'polishe' ),
+            'title'       => esc_html__( 'Page Header', 'xconnect' ),
             'description' => '',
             'priority'    => 9,
             'capability'  => 'edit_theme_options',
         ),
         /* color scheme */
         'color_scheme'   => array(
-			'title'      => esc_html__( 'Color Scheme', 'polishe' ),
+			'title'      => esc_html__( 'Color Scheme', 'xconnect' ),
 			'priority'   => 7,
 			'capability' => 'edit_theme_options',
 		),
         /* blog */
         'blog_page'           => array(
-			'title'       => esc_html__( 'Blog Page', 'polishe' ),
+			'title'       => esc_html__( 'Blog Page', 'xconnect' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'blog',
 		),
         'single_post'           => array(
-			'title'       => esc_html__( 'Single Post', 'polishe' ),
+			'title'       => esc_html__( 'Single Post', 'xconnect' ),
 			'description' => '',
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
@@ -259,40 +259,40 @@ function polishe_customize_settings() {
         ),
         /* footer */
         'footer'         => array(
-			'title'      => esc_html__( 'Footer', 'polishe' ),
+			'title'      => esc_html__( 'Footer', 'xconnect' ),
 			'priority'   => 10,
 			'capability' => 'edit_theme_options',
 		),
         /* portfolio */
         'portfolio_page'  => array(
-			'title'       => esc_html__( 'Archive Page', 'polishe' ),
+			'title'       => esc_html__( 'Archive Page', 'xconnect' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		'portfolio_post'  => array(
-			'title'       => esc_html__( 'Single Page', 'polishe' ),
+			'title'       => esc_html__( 'Single Page', 'xconnect' ),
 			'priority'    => 10,
 			'capability'  => 'edit_theme_options',
 			'panel'       => 'portfolio',			
 		),
 		/* typography */
 		'typography'           => array(
-            'title'       => esc_html__( 'Typography', 'polishe' ),
+            'title'       => esc_html__( 'Typography', 'xconnect' ),
             'description' => '',
             'priority'    => 15,
             'capability'  => 'edit_theme_options',
         ),
 		/* 404 */
 		'error_404'       => array(
-            'title'       => esc_html__( '404', 'polishe' ),
+            'title'       => esc_html__( '404', 'xconnect' ),
             'description' => '',
             'priority'    => 11,
             'capability'  => 'edit_theme_options',
         ),
 		/* js code */
 		'script_code'   => array(
-			'title'      => esc_html__( 'Google Analytics(Script Code)', 'polishe' ),
+			'title'      => esc_html__( 'Google Analytics(Script Code)', 'xconnect' ),
 			'priority'   => 210,
 			'capability' => 'edit_theme_options',
 		),
@@ -302,47 +302,47 @@ function polishe_customize_settings() {
         /* header settings */
 		'header_layout'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Desktop', 'polishe' ), 
-	 		'description' => esc_attr__( 'Choose the header on desktop.', 'polishe' ), 
+	 		'label'       => esc_attr__( 'Select Header Desktop', 'xconnect' ), 
+	 		'description' => esc_attr__( 'Choose the header on desktop.', 'xconnect' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 3,
-	 		'placeholder' => esc_attr__( 'Select a header', 'polishe' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'xconnect' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
 		'header_fixed'    => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Header Transparent?', 'polishe' ),
-	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'polishe' ), 
+			'label'       => esc_html__( 'Header Transparent?', 'xconnect' ),
+	 		'description' => esc_attr__( 'Enable when your header is transparent.', 'xconnect' ), 
             'section'     => 'main_header',
 			'default'     => '1',
 			'priority'    => 4,
         ),
         'header_mobile'   => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Header Mobile', 'polishe' ), 
-	 		'description' => esc_attr__( 'Choose the header on mobile.', 'polishe' ), 
+	 		'label'       => esc_attr__( 'Select Header Mobile', 'xconnect' ), 
+	 		'description' => esc_attr__( 'Choose the header on mobile.', 'xconnect' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 5,
-	 		'placeholder' => esc_attr__( 'Select a header', 'polishe' ), 
+	 		'placeholder' => esc_attr__( 'Select a header', 'xconnect' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
         ),
         'is_sidepanel'    => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Side Panel for all site?', 'polishe' ),
+            'label'       => esc_html__( 'Side Panel for all site?', 'xconnect' ),
             'section'     => 'main_header',
             'default'     => '1',
             'priority'    => 6,
         ),
         'sidepanel_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Side Panel', 'polishe' ), 
-	 		'description' => esc_attr__( 'Choose the side panel on header.', 'polishe' ), 
+	 		'label'       => esc_attr__( 'Select Side Panel', 'xconnect' ), 
+	 		'description' => esc_attr__( 'Choose the side panel on header.', 'xconnect' ), 
 	 		'section'     => 'main_header', 
 	 		'default'     => '', 
 	 		'priority'    => 6,
-	 		'placeholder' => esc_attr__( 'Select a panel', 'polishe' ), 
+	 		'placeholder' => esc_attr__( 'Select a panel', 'xconnect' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_header_builders', 'posts_per_page' => -1 ) ) : array(),
             'active_callback' => array(
                 array(
@@ -354,7 +354,7 @@ function polishe_customize_settings() {
 		),
 		'panel_left'     => array(
             'type'        => 'toggle',
-			'label'       => esc_html__( 'Side Panel On Left', 'polishe' ),
+			'label'       => esc_html__( 'Side Panel On Left', 'xconnect' ),
             'section'     => 'main_header',
 			'default'     => '0',
 			'priority'    => 7,
@@ -374,14 +374,14 @@ function polishe_customize_settings() {
         /*page header */
         'pheader_switch'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Page Header On/Off', 'polishe' ),
+            'label'       => esc_html__( 'Page Header On/Off', 'xconnect' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
         ),
         'breadcrumbs'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On/Off', 'polishe' ),
+            'label'       => esc_html__( 'Breadcrumbs On/Off', 'xconnect' ),
             'section'     => 'page_header',
             'default'     => 1,
             'priority'    => 10,
@@ -395,7 +395,7 @@ function polishe_customize_settings() {
         ),
         'left_bread'     => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Breadcrumbs On Left', 'polishe' ),
+            'label'       => esc_html__( 'Breadcrumbs On Left', 'xconnect' ),
             'section'     => 'page_header',
             'default'     => 0,
             'priority'    => 10,
@@ -414,7 +414,7 @@ function polishe_customize_settings() {
         ),
         'pheader_img'  => array(
             'type'     => 'image',
-            'label'    => esc_html__( 'Background Image', 'polishe' ),
+            'label'    => esc_html__( 'Background Image', 'xconnect' ),
             'section'  => 'page_header',
             'default'  => '',
             'priority' => 10,
@@ -434,7 +434,7 @@ function polishe_customize_settings() {
         ),
         'pheader_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'polishe' ),
+            'label'    => esc_html__( 'Background Color', 'xconnect' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -453,7 +453,7 @@ function polishe_customize_settings() {
         ),
         'ptitle_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Title Color', 'polishe' ),
+            'label'    => esc_html__( 'Title Color', 'xconnect' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -472,7 +472,7 @@ function polishe_customize_settings() {
         ),
         'bread_color'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Breadcrumbs Color', 'polishe' ),
+            'label'    => esc_html__( 'Breadcrumbs Color', 'xconnect' ),
             'section'  => 'page_header',
             'priority' => 10,
             'output'    => array(
@@ -496,14 +496,14 @@ function polishe_customize_settings() {
         ),
         'pheader_height'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'polishe' ),
+            'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'xconnect' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'polishe' ),
-                'tablet'  => esc_attr__( 'Tablet', 'polishe' ),
-                'mobile'  => esc_attr__( 'Mobile', 'polishe' ),
+                'desktop' => esc_attr__( 'Desktop', 'xconnect' ),
+                'tablet'  => esc_attr__( 'Tablet', 'xconnect' ),
+                'mobile'  => esc_attr__( 'Mobile', 'xconnect' ),
             ),
             'output'   => array(
                 array(
@@ -540,14 +540,14 @@ function polishe_customize_settings() {
         ),
         'head_size'  => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'polishe' ),
+            'label'    => esc_html__( 'Page Title Size (Ex: 30px)', 'xconnect' ),
             'section'  => 'page_header',
             'transport' => 'auto',
             'priority' => 10,
             'choices'   => array(
-                'desktop' => esc_attr__( 'Desktop', 'polishe' ),
-                'tablet'  => esc_attr__( 'Tablet', 'polishe' ),
-                'mobile'  => esc_attr__( 'Mobile', 'polishe' ),
+                'desktop' => esc_attr__( 'Desktop', 'xconnect' ),
+                'tablet'  => esc_attr__( 'Tablet', 'xconnect' ),
+                'mobile'  => esc_attr__( 'Mobile', 'xconnect' ),
             ),
             'output'   => array(
                 array(
@@ -585,11 +585,11 @@ function polishe_customize_settings() {
         /* blog settings */
 		'blog_layout'           => array(
 			'type'        => 'radio-image',
-			'label'       => esc_html__( 'Blog Layout', 'polishe' ),
+			'label'       => esc_html__( 'Blog Layout', 'xconnect' ),
 			'section'     => 'blog_page',
 			'default'     => 'content-sidebar',
 			'priority'    => 7,
-			'description' => esc_html__( 'Select default sidebar for the blog page.', 'polishe' ),
+			'description' => esc_html__( 'Select default sidebar for the blog page.', 'xconnect' ),
 			'choices'     => array(
 				'content-sidebar' 	=> get_template_directory_uri() . '/inc/backend/images/right.png',
 				'sidebar-content' 	=> get_template_directory_uri() . '/inc/backend/images/left.png',
@@ -598,27 +598,27 @@ function polishe_customize_settings() {
 		),
         'blog_style'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Style', 'polishe' ),
+            'label'       => esc_html__( 'Blog Style', 'xconnect' ),
             'section'     => 'blog_page',
             'default'     => 'list',
             'priority'    => 8,
-            'description' => esc_html__( 'Select style default for the blog page.', 'polishe' ),
+            'description' => esc_html__( 'Select style default for the blog page.', 'xconnect' ),
             'choices'     => array(
-                'list' => esc_attr__( 'Blog List', 'polishe' ),
-                'grid' => esc_attr__( 'Blog Grid', 'polishe' ),
+                'list' => esc_attr__( 'Blog List', 'xconnect' ),
+                'grid' => esc_attr__( 'Blog Grid', 'xconnect' ),
             ),
         ),
         'blog_columns'           => array(
             'type'        => 'select',
-            'label'       => esc_html__( 'Blog Columns', 'polishe' ),
+            'label'       => esc_html__( 'Blog Columns', 'xconnect' ),
             'section'     => 'blog_page',
             'default'     => 'pf_2_cols',
             'priority'    => 8,
-            'description' => esc_html__( 'Select columns default for the blog page.', 'polishe' ),
+            'description' => esc_html__( 'Select columns default for the blog page.', 'xconnect' ),
             'choices'     => array(
-                'pf_2_cols' => esc_attr__( '2 Columns', 'polishe' ),
-                'pf_3_cols' => esc_attr__( '3 Columns', 'polishe' ),
-                'pf_4_cols' => esc_attr__( '4 Columns', 'polishe' ),
+                'pf_2_cols' => esc_attr__( '2 Columns', 'xconnect' ),
+                'pf_3_cols' => esc_attr__( '3 Columns', 'xconnect' ),
+                'pf_4_cols' => esc_attr__( '4 Columns', 'xconnect' ),
             ),
             'active_callback' => array(
                 array(
@@ -630,20 +630,20 @@ function polishe_customize_settings() {
         ),	
 		'post_entry_meta'              => array(
             'type'     => 'multicheck',
-            'label'    => esc_html__( 'Entry Meta', 'polishe' ),
+            'label'    => esc_html__( 'Entry Meta', 'xconnect' ),
             'section'  => 'blog_page',
             'default'  => array( 'date', 'author', 'comm' ),
             'choices'  => array(
-                'date'    => esc_html__( 'Date', 'polishe' ),
-                'author'  => esc_html__( 'Author', 'polishe' ),
-                'comm'    => esc_html__( 'Comment', 'polishe' ),
+                'date'    => esc_html__( 'Date', 'xconnect' ),
+                'author'  => esc_html__( 'Author', 'xconnect' ),
+                'comm'    => esc_html__( 'Comment', 'xconnect' ),
             ),
             'priority' => 10,
         ),
         /* single blog */
         'single_post_layout'           => array(
             'type'        => 'radio-image',
-            'label'       => esc_html__( 'Layout', 'polishe' ),
+            'label'       => esc_html__( 'Layout', 'xconnect' ),
             'section'     => 'single_post',
             'default'     => 'content-sidebar',
             'priority'    => 10,
@@ -655,14 +655,14 @@ function polishe_customize_settings() {
         ),
         'ptitle_post'               => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Page Title', 'polishe' ),
+			'label'           => esc_html__( 'Page Title', 'xconnect' ),
 			'section'         => 'single_post',
-			'default'         => esc_html__( 'Blog Single', 'polishe' ),
+			'default'         => esc_html__( 'Blog Single', 'xconnect' ),
 			'priority'        => 10,
 		),
 		'single_separator1'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Social Share', 'polishe' ),
+			'label'       => esc_html__( 'Social Share', 'xconnect' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
@@ -672,41 +672,41 @@ function polishe_customize_settings() {
             'section'  => 'single_post',
             'default'  => array( 'twitter', 'facebook', 'pinterest', 'linkedin' ),
             'choices'  => array(
-                'twit'  	=> esc_html__( 'Twitter', 'polishe' ),
-                'face'    	=> esc_html__( 'Facebook', 'polishe' ),
-                'pint'     	=> esc_html__( 'Pinterest', 'polishe' ),
-                'link'     	=> esc_html__( 'Linkedin', 'polishe' ),
-                'google'  	=> esc_html__( 'Google Plus', 'polishe' ),
-                'tumblr'    => esc_html__( 'Tumblr', 'polishe' ),
-                'reddit'    => esc_html__( 'Reddit', 'polishe' ),
-                'vk'     	=> esc_html__( 'VK', 'polishe' ),
+                'twit'  	=> esc_html__( 'Twitter', 'xconnect' ),
+                'face'    	=> esc_html__( 'Facebook', 'xconnect' ),
+                'pint'     	=> esc_html__( 'Pinterest', 'xconnect' ),
+                'link'     	=> esc_html__( 'Linkedin', 'xconnect' ),
+                'google'  	=> esc_html__( 'Google Plus', 'xconnect' ),
+                'tumblr'    => esc_html__( 'Tumblr', 'xconnect' ),
+                'reddit'    => esc_html__( 'Reddit', 'xconnect' ),
+                'vk'     	=> esc_html__( 'VK', 'xconnect' ),
             ),
             'priority' => 10,
         ),
         'single_separator2'     => array(
 			'type'        => 'custom',
-			'label'       => esc_html__( 'Entry Footer', 'polishe' ),
+			'label'       => esc_html__( 'Entry Footer', 'xconnect' ),
 			'section'     => 'single_post',
 			'default'     => '<hr>',
 			'priority'    => 10,
 		),
         'author_box'      => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Author Info Box', 'polishe' ),
+			'label'       => esc_attr__( 'Author Info Box', 'xconnect' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'post_nav'     	  => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Post Navigation', 'polishe' ),
+			'label'       => esc_attr__( 'Post Navigation', 'xconnect' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
 		),
 		'related_post'    => array(
 			'type'        => 'checkbox',
-			'label'       => esc_attr__( 'Related Posts', 'polishe' ),
+			'label'       => esc_attr__( 'Related Posts', 'xconnect' ),
 			'section'     => 'single_post',
 			'default'     => true,
 			'priority'    => 10,
@@ -714,20 +714,20 @@ function polishe_customize_settings() {
         /* project settings */
 		'portfolio_archive'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Archive', 'polishe' ),
+			'label'       => esc_html__( 'Portfolio Archive', 'xconnect' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'archive_default',
 			'priority'    => 1,
-			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'polishe' ),
+			'description' => esc_html__( 'Select page default for the portfolio archive page.', 'xconnect' ),
 			'choices'     => array(
-				'archive_default' => esc_attr__( 'Archive page default', 'polishe' ),
-				'archive_custom' => esc_attr__( 'Archive page custom', 'polishe' ),
+				'archive_default' => esc_attr__( 'Archive page default', 'xconnect' ),
+				'archive_custom' => esc_attr__( 'Archive page custom', 'xconnect' ),
 			),
 		),
 		'archive_page_custom'     => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'polishe' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'polishe' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'xconnect' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for archive portfolio page.', 'xconnect' ), 
 	 		'section'     => 'portfolio_page', 
 	 		'default'     => '', 
 	 		'priority'    => 2,	 		
@@ -741,15 +741,15 @@ function polishe_customize_settings() {
 		),
 		'portfolio_column'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Portfolio Columns', 'polishe' ),
+			'label'       => esc_html__( 'Portfolio Columns', 'xconnect' ),
 			'section'     => 'portfolio_page',
 			'default'     => '3cl',
 			'priority'    => 3,
-			'description' => esc_html__( 'Select default column for the portfolio page.', 'polishe' ),
+			'description' => esc_html__( 'Select default column for the portfolio page.', 'xconnect' ),
 			'choices'     => array(
-				'2cl' => esc_attr__( '2 Column', 'polishe' ),
-				'3cl' => esc_attr__( '3 Column', 'polishe' ),
-				'4cl' => esc_attr__( '4 Column', 'polishe' ),
+				'2cl' => esc_attr__( '2 Column', 'xconnect' ),
+				'3cl' => esc_attr__( '3 Column', 'xconnect' ),
+				'4cl' => esc_attr__( '4 Column', 'xconnect' ),
 			),
 			'active_callback' => array(
 				array(
@@ -761,15 +761,15 @@ function polishe_customize_settings() {
 		),
 		'portfolio_style'           => array(
 			'type'        => 'select',
-			'label'       => esc_html__( 'Hover Style', 'polishe' ),
+			'label'       => esc_html__( 'Hover Style', 'xconnect' ),
 			'section'     => 'portfolio_page',
 			'default'     => 'style1',
 			'priority'    => 4,
-			'description' => esc_html__( 'Select default style for the portfolio page.', 'polishe' ),
+			'description' => esc_html__( 'Select default style for the portfolio page.', 'xconnect' ),
 			'choices'     => array(
-				'style1' => esc_attr__( 'Background Overlay', 'polishe' ),
-				'style2' => esc_attr__( 'Background Solid', 'polishe' ),
-				'style3' => esc_attr__( 'Hidden', 'polishe' ),
+				'style1' => esc_attr__( 'Background Overlay', 'xconnect' ),
+				'style2' => esc_attr__( 'Background Solid', 'xconnect' ),
+				'style3' => esc_attr__( 'Hidden', 'xconnect' ),
 			),
 			'active_callback' => array(
 				array(
@@ -783,8 +783,8 @@ function polishe_customize_settings() {
 			'type'        => 'number',
 			'section'     => 'portfolio_page',
 			'priority'    => 5,
-			'label'       => esc_html__( 'Posts per page', 'polishe' ),			
-			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'polishe' ),
+			'label'       => esc_html__( 'Posts per page', 'xconnect' ),			
+			'description' => esc_html__( 'Change Posts Per Page for Portfolio Archive, Taxonomy.', 'xconnect' ),
 			'default'     => '',
 			'active_callback' => array(
 				array(
@@ -796,23 +796,23 @@ function polishe_customize_settings() {
 		),
 		'pf_nav'     	  => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Projects Navigation On/Off', 'polishe' ),
+			'label'       => esc_attr__( 'Projects Navigation On/Off', 'xconnect' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_switch'     => array(
 			'type'        => 'toggle',
-			'label'       => esc_attr__( 'Related Projects On/Off', 'polishe' ),
+			'label'       => esc_attr__( 'Related Projects On/Off', 'xconnect' ),
 			'section'     => 'portfolio_post',
 			'default'     => 1,
 			'priority'    => 7,
 		),
 		'pf_related_text'      => array(
 			'type'            => 'text',
-			'label'           => esc_html__( 'Related Projects Heading', 'polishe' ),
+			'label'           => esc_html__( 'Related Projects Heading', 'xconnect' ),
 			'section'         => 'portfolio_post',
-			'default'         => esc_html__( 'Related Projects', 'polishe' ),
+			'default'         => esc_html__( 'Related Projects', 'xconnect' ),
 			'priority'        => 7,
 			'active_callback' => array(
 				array(
@@ -825,17 +825,17 @@ function polishe_customize_settings() {
         /* footer settings */
 		'footer_layout'     => array(
 			'type'        => 'select',  
-	 		'label'       => esc_attr__( 'Select Footer', 'polishe' ), 
-	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'polishe' ), 
+	 		'label'       => esc_attr__( 'Select Footer', 'xconnect' ), 
+	 		'description' => esc_attr__( 'Choose a footer for all site here.', 'xconnect' ), 
 	 		'section'     => 'footer', 
 	 		'default'     => '', 
 	 		'priority'    => 1,
-	 		'placeholder' => esc_attr__( 'Select a footer', 'polishe' ), 
+	 		'placeholder' => esc_attr__( 'Select a footer', 'xconnect' ), 
 	 		'choices'     => ( class_exists( 'Kirki_Helper' ) ) ? Kirki_Helper::get_posts( array( 'post_type' => 'xp_footer_builders', 'posts_per_page' => -1 ) ) : array(),
 		),
         'footer_fixed'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Footer Fixed On/Off?', 'polishe' ),
+            'label'       => esc_html__( 'Footer Fixed On/Off?', 'xconnect' ),
             'section'     => 'footer',
             'default'     => 0,
             'priority'    => 2,
@@ -849,14 +849,14 @@ function polishe_customize_settings() {
 		),
 		'backtotop'  => array(
             'type'        => 'toggle',
-            'label'       => esc_html__( 'Back To Top On/Off?', 'polishe' ),
+            'label'       => esc_html__( 'Back To Top On/Off?', 'xconnect' ),
             'section'     => 'footer',
             'default'     => 1,
             'priority'    => 4,
         ),
         'bg_backtotop'    => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'polishe' ),
+            'label'    => esc_html__( 'Background Color', 'xconnect' ),
             'section'  => 'footer',
             'priority' => 5,
             'default'     => '',
@@ -876,7 +876,7 @@ function polishe_customize_settings() {
         ),
         'color_backtotop' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Color', 'polishe' ),
+            'label'    => esc_html__( 'Color', 'xconnect' ),
             'section'  => 'footer',
             'priority' => 6,
             'default'     => '',
@@ -896,7 +896,7 @@ function polishe_customize_settings() {
         ),
         'spacing_backtotop' => array(
             'type'     => 'dimensions',
-            'label'    => esc_html__( 'Spacing', 'polishe' ),
+            'label'    => esc_html__( 'Spacing', 'xconnect' ),
             'section'  => 'footer',
             'priority' => 7,
             'default'     => array(
@@ -905,8 +905,8 @@ function polishe_customize_settings() {
 			),
 			'choices'     => array(
 				'labels' => array(
-					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'polishe' ),
-					'right'   => esc_html__( 'Right (Ex: 20px)', 'polishe' ),
+					'bottom'  => esc_html__( 'Bottom (Ex: 20px)', 'xconnect' ),
+					'right'   => esc_html__( 'Right (Ex: 20px)', 'xconnect' ),
 				),
 			),
             'output'    => array(
@@ -932,7 +932,7 @@ function polishe_customize_settings() {
 		/* typography */
         'body_typo'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 1', 'polishe' ),
+            'label'    => esc_html__( 'Body Font 1', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -951,7 +951,7 @@ function polishe_customize_settings() {
         ),
         'second_font'    => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Body Font 2', 'polishe' ),
+            'label'    => esc_html__( 'Body Font 2', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -960,7 +960,7 @@ function polishe_customize_settings() {
         ),
         'heading1_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 1', 'polishe' ),
+            'label'    => esc_html__( 'Heading 1', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -979,7 +979,7 @@ function polishe_customize_settings() {
         ),
         'heading2_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 2', 'polishe' ),
+            'label'    => esc_html__( 'Heading 2', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -998,7 +998,7 @@ function polishe_customize_settings() {
         ),
         'heading3_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 3', 'polishe' ),
+            'label'    => esc_html__( 'Heading 3', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1017,7 +1017,7 @@ function polishe_customize_settings() {
         ),
         'heading4_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 4', 'polishe' ),
+            'label'    => esc_html__( 'Heading 4', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1036,7 +1036,7 @@ function polishe_customize_settings() {
         ),
         'heading5_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 5', 'polishe' ),
+            'label'    => esc_html__( 'Heading 5', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1055,7 +1055,7 @@ function polishe_customize_settings() {
         ),
         'heading6_typo'                           => array(
             'type'     => 'typography',
-            'label'    => esc_html__( 'Heading 6', 'polishe' ),
+            'label'    => esc_html__( 'Heading 6', 'xconnect' ),
             'section'  => 'typography',
             'priority' => 10,
             'default'  => array(
@@ -1076,9 +1076,9 @@ function polishe_customize_settings() {
 		/* 404 */
 		'page_404'   	  => array(
 			'type'        => 'dropdown-pages',  
-	 		'label'       => esc_attr__( 'Select Page', 'polishe' ), 
-	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'polishe' ),
-	 		'placeholder' => esc_attr__( 'Select a page 404', 'polishe' ), 
+	 		'label'       => esc_attr__( 'Select Page', 'xconnect' ), 
+	 		'description' => esc_attr__( 'Choose a custom page for page 404.', 'xconnect' ),
+	 		'placeholder' => esc_attr__( 'Select a page 404', 'xconnect' ), 
 	 		'section'     => 'error_404', 
 	 		'default'     => '', 
 			'priority'    => 3,
@@ -1087,7 +1087,7 @@ function polishe_customize_settings() {
 		/* Color Scheme */
         'primary_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Primary Color', 'polishe' ),
+            'label'    => esc_html__( 'Primary Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#e8d4ad',
             'priority' => 10,
@@ -1095,7 +1095,7 @@ function polishe_customize_settings() {
 
         'secondary_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Secondary Color', 'polishe' ),
+            'label'    => esc_html__( 'Secondary Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#343a20',
             'priority' => 10,
@@ -1103,7 +1103,7 @@ function polishe_customize_settings() {
 
         'text_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Text Color', 'polishe' ),
+            'label'    => esc_html__( 'Text Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#e3e3e3',
             'priority' => 10,
@@ -1111,7 +1111,7 @@ function polishe_customize_settings() {
 
         'accent_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Accent Color', 'polishe' ),
+            'label'    => esc_html__( 'Accent Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#262b14',
             'priority' => 10,
@@ -1119,7 +1119,7 @@ function polishe_customize_settings() {
 
         'bg_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'polishe' ),
+            'label'    => esc_html__( 'Background Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#f4efef',
             'priority' => 10,
@@ -1127,7 +1127,7 @@ function polishe_customize_settings() {
 
         'white_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'White Color', 'polishe' ),
+            'label'    => esc_html__( 'White Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#FFFFFF',
             'priority' => 10,
@@ -1135,7 +1135,7 @@ function polishe_customize_settings() {
 
         'divider_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Divider Color', 'polishe' ),
+            'label'    => esc_html__( 'Divider Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#FFFFFF14',
             'priority' => 10,
@@ -1143,7 +1143,7 @@ function polishe_customize_settings() {
 
         'dark_divider_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Dark Divider Color', 'polishe' ),
+            'label'    => esc_html__( 'Dark Divider Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#3835373b',
             'priority' => 10,
@@ -1152,7 +1152,7 @@ function polishe_customize_settings() {
         /*google atlantic*/
         'js_code'  => array(
             'type'        => 'code',
-            'label'       => esc_html__( 'Code', 'polishe' ),
+            'label'       => esc_html__( 'Code', 'xconnect' ),
             'section'     => 'script_code',
             'choices'     => [
 				'language' => 'js',
@@ -1161,11 +1161,11 @@ function polishe_customize_settings() {
         ),
 		
 	);
-	$settings['panels']   = apply_filters( 'polishe_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'polishe_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'polishe_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'xconnect_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'xconnect_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'xconnect_customize_fields', $fields );
 
 	return $settings;
 }
 
-$polishe_customize = new Polishe_Customize( polishe_customize_settings() );
+$xconnect_customize = new xConnect_Customize( xconnect_customize_settings() );
