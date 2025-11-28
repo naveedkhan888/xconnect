@@ -976,8 +976,9 @@ td {
 .for_border_top_clip::after {
   top: inherit !important;
   bottom: 0 !important;
-  right: 0 !important;
-  left: inherit !important;
+  left: -20px !important;
+  right: inherit !important;
+  position: absolute;
 }
 
 /*--------------------------------------------------------------
