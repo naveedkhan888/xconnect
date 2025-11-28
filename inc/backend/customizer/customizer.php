@@ -1089,7 +1089,7 @@ function xconnect_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Primary Color', 'xconnect' ),
             'section'  => 'color_scheme',
-            'default'  => '#e8d4ad',
+            'default'  => '#eb6c56',
             'priority' => 10,
         ),
 
@@ -1097,7 +1097,7 @@ function xconnect_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Secondary Color', 'xconnect' ),
             'section'  => 'color_scheme',
-            'default'  => '#343a20',
+            'default'  => '#f6f6f6',
             'priority' => 10,
         ),
 
@@ -1105,7 +1105,7 @@ function xconnect_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Text Color', 'xconnect' ),
             'section'  => 'color_scheme',
-            'default'  => '#e3e3e3',
+            'default'  => '#6c6d6f',
             'priority' => 10,
         ),
 
@@ -1113,7 +1113,7 @@ function xconnect_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Accent Color', 'xconnect' ),
             'section'  => 'color_scheme',
-            'default'  => '#262b14',
+            'default'  => '#3b3b5b',
             'priority' => 10,
         ),
 

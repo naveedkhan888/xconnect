@@ -7,10 +7,10 @@ if(!function_exists('xconnect_color_scheme')){
 	  	$color_scheme = '';
 
 	  	// Get theme options with fallbacks
-		$primary_color      = xconnect_get_option('primary_color', '#e8d4ad');
-		$secondary_color    = xconnect_get_option('secondary_color', '#343a20');
-		$text_color         = xconnect_get_option('text_color', '#e3e3e3');
-		$accent_color       = xconnect_get_option('accent_color', '#262b14');
+		$primary_color      = xconnect_get_option('primary_color', '#eb6c56');
+		$secondary_color    = xconnect_get_option('secondary_color', '#f6f6f6');
+		$text_color         = xconnect_get_option('text_color', '#6c6d6f');
+		$accent_color       = xconnect_get_option('accent_color', '#3b3b5b');
 		$bg_color           = xconnect_get_option('bg_color', '#f4efef');
 		$white_color        = xconnect_get_option('white_color', '#FFFFFF');
 		$divider_color      = xconnect_get_option('divider_color', '#FFFFFF14');
@@ -18,10 +18,10 @@ if(!function_exists('xconnect_color_scheme')){
 
 
 		// Ensure variables have values (use fallbacks if empty)
-        $primary_color      = !empty($primary_color) ? $primary_color : '#e8d4ad';
-        $secondary_color    = !empty($secondary_color) ? $secondary_color : '#343a20';
-        $text_color         = !empty($text_color) ? $text_color : '#1d1312';
-        $accent_color       = !empty($accent_color) ? $accent_color : '#262b14';
+        $primary_color      = !empty($primary_color) ? $primary_color : '#eb6c56';
+        $secondary_color    = !empty($secondary_color) ? $secondary_color : '#f6f6f6';
+        $text_color         = !empty($text_color) ? $text_color : '#6c6d6f';
+        $accent_color       = !empty($accent_color) ? $accent_color : '#3b3b5b';
         $bg_color           = !empty($bg_color) ? $bg_color : '#f4efef';
         $white_color        = !empty($white_color) ? $white_color : '#FFFFFF';
         $divider_color      = !empty($divider_color) ? $divider_color : '#FFFFFF14';

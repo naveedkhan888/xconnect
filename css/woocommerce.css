@@ -102,7 +102,7 @@ WooCommerce styles override
   margin-bottom: 0;
 }
 .woocommerce ul.products li.product .price .woocommerce-Price-amount, .woocommerce-page ul.products li.product .price .woocommerce-Price-amount {
-  color: #0f3d3a;
+  color: #eb6c56;
 }
 .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del {
   color: #636363;
@@ -172,7 +172,7 @@ WooCommerce styles override
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
   text-align: center;
-  background: #0f3d3a;
+  background: #eb6c56;
   cursor: pointer;
   border: 1px solid transparent;
   color: #fff;
@@ -431,13 +431,13 @@ WooCommerce styles override
   -ms-transition: all 0.35s ease-in-out;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-  border-color: #0f3d3a;
+  border-color: #eb6c56;
 }
 .woocommerce-product-details__short-description p {
 
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
-  border-color: #0f3d3a;
+  border-color: #eb6c56;
   color: #1a1b1e;
 }
 
@@ -492,7 +492,7 @@ WooCommerce styles override
   font-weight: 600;
 }
 .woocommerce table.shop_table td.product-price, .woocommerce table.shop_table td.product-subtotal {
-  color: #0f3d3a;
+  color: #eb6c56;
 }
 .woocommerce table.shop_table td.actions {
   padding-top: 40px;
@@ -573,17 +573,17 @@ WooCommerce styles override
 }
 
 .woocommerce-message {
-  border-top-color: #0f3d3a;
+  border-top-color: #eb6c56;
 }
 .woocommerce-message:before {
-  color: #0f3d3a;
+  color: #eb6c56;
 }
 
 .woocommerce-info {
-  border-top-color: #0f3d3a;
+  border-top-color: #eb6c56;
 }
 .woocommerce-info:before {
-  color: #0f3d3a;
+  color: #eb6c56;
 }
 
 .woocommerce .cart-collaterals,
@@ -729,20 +729,20 @@ WooCommerce styles override
 .woocommerce button.button.alt, .woocommerce input.button.alt,
 .woocommerce #respond input#submit, .woocommerce a.button,
 .woocommerce input.button, .woocommerce button.button.alt.disabled {
-  background-color: #0f3d3a;
+  background-color: #eb6c56;
 }
 .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
 .woocommerce input.button:hover, .woocommerce button.button.alt.disabled:hover {
-  background-color: #1e73be;
+  background-color: #3b3b5b;
 }
 
 .woocommerce button.button {
-  background-color: #0f3d3a;
+  background-color: #eb6c56;
 }
 .woocommerce button.button:hover {
-  background-color: #1e73be;
+  background-color: #3b3b5b;
 }
 
 /**
@@ -750,7 +750,7 @@ WooCommerce styles override
  */
 /* widget product */
 .woocommerce .woocommerce-Price-amount {
-  color: #0f3d3a;
+  color: #eb6c56;
   font-weight: 600;
 }
 .woocommerce .site ul.product_list_widget li {
@@ -792,7 +792,7 @@ WooCommerce styles override
 }
 
 .woocommerce .site ul.product_list_widget li a:not(.remove):hover {
-  color: #0f3d3a;
+  color: #eb6c56;
 }
 .woocommerce .site ul.product_list_widget li .star-rating {
   float: none;
@@ -876,7 +876,7 @@ WooCommerce styles override
   font-size: 13px;
   font-weight: 600;
   border-radius: 0;
-  background-color: #0f3d3a;
+  background-color: #eb6c56;
   text-transform: uppercase;
   padding: 14px 10px;
   min-width: 46%;
@@ -888,10 +888,10 @@ WooCommerce styles override
   border-radius: 0;
 }
 .woocommerce-mini-cart__buttons a.button.wc-forward:hover {
-  background: #1e73be;
+  background: #3b3b5b;
 }
 .woocommerce-mini-cart__buttons a.button.checkout {
-  background-color: #1e73be;
+  background-color: #3b3b5b;
   color: #fff;
 }
 
@@ -911,7 +911,7 @@ WooCommerce styles override
   color: #1a1b1e;
 }
 .woocommerce .woocommerce-widget-layered-nav-list li a:hover {
-  color: #0f3d3a;
+  color: #eb6c56;
 }
 .woocommerce .woocommerce-widget-layered-nav-list li span.count {
   color: #666666;
@@ -951,7 +951,7 @@ WooCommerce styles override
   font-size: 14px;
   letter-spacing: 0.5px;
   background: none;
-  color: #0f3d3a;
+  color: #eb6c56;
   box-shadow: none;
   text-transform: uppercase;
 }
@@ -987,7 +987,7 @@ WooCommerce styles override
 
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
-  color: #0f3d3a;
+  color: #eb6c56;
 }
 
 .woocommerce div.product .entry-summary p.price,
