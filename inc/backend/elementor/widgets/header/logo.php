@@ -67,7 +67,7 @@ class xConnect_Logo extends Widget_Base{
 				'label' => esc_html__( 'Image', 'xconnect' ),
 				'type'  => Controls_Manager::MEDIA,
 				'default' => [
-					'url' => esc_url( get_stylesheet_directory_uri() . '/images/logo.svg' ),
+					'url' => get_template_directory_uri().'/images/logo.svg',
 				],
 			 ]
 		);
@@ -110,15 +110,19 @@ class xConnect_Logo extends Widget_Base{
 	}
 
 	protected function render() {
-		$settings = $this->get_settings_for_display();
-		?>
-			
-	    	<div class="the-logo">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php echo esc_attr( $settings['logo_image']['url'] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-				</a>			        
-		    </div>
-		    
+	    $settings = $this->get_settings_for_display();
+
+	    // Fallback image if empty
+	    $logo_url = !empty( $settings['logo_image']['url'] )
+	        ? $settings['logo_image']['url']
+	        : get_template_directory_uri() . '/images/logo.svg';
+
+	    ?>
+	    <div class="the-logo">
+	        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+	            <img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+	        </a>
+	    </div>
 	    <?php
 	}
 
