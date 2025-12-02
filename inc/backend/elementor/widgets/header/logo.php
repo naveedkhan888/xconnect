@@ -69,6 +69,7 @@ class xConnect_Logo extends Widget_Base{
 				'default' => [
 					'url' => get_template_directory_uri().'/images/logo.svg',
 				],
+				'description' => esc_html__( 'Upload a custom logo. If empty, site logo from Customizer will be used.', 'xconnect' ),
 			 ]
 		);
 
