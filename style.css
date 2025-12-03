@@ -1018,13 +1018,13 @@ td {
   width: 100%;
 }
 .xptf-btn:hover, .xptf-btn:focus {
-  background: var(--accent-color);
+  
 }
 .xptf-btn.xptf-btn-dark {
   background: var(--accent-color);
 }
 .xptf-btn.xptf-btn-dark:hover, .xptf-btn.xptf-btn-dark:focus {
-  background: var(--primary-color);
+  
 }
 .xptf-btn i {
   margin-right: 12px;

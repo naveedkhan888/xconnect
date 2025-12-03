@@ -352,9 +352,10 @@ class xConnect_Button extends Widget_Base {
                         <?php Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
                     </span>
                 <?php endif; ?>
-                
-                <span class="btn-text"><?php echo esc_html( $settings['text'] ); ?></span>
-                
+                <span class="hidden_btnnn">
+                    <span class="btn-text"><?php echo esc_html( $settings['text'] ); ?></span>
+                    <span class="btn-text overlay_h"><?php echo esc_html( $settings['text'] ); ?></span>
+                </span>
                 <?php if ( ! empty( $settings['selected_icon']['value'] ) && $settings['icon_position'] === 'right' ) : ?>
                     <span class="btn-icon-right">
                         <?php Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
