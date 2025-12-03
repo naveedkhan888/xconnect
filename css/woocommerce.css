@@ -888,7 +888,7 @@ WooCommerce styles override
   border-radius: 0;
 }
 .woocommerce-mini-cart__buttons a.button.wc-forward:hover {
-  background: var(--accent-color);
+
 }
 .woocommerce-mini-cart__buttons a.button.checkout {
   background-color: var(--accent-color);
