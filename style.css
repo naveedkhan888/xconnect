@@ -1079,6 +1079,28 @@ td {
   color: #fff;
 }
 
+.xptf-btn:hover .hidden_btnnn .btn-text {
+  transform: translate(0,-101%);
+}
+.xptf-btn:hover .hidden_btnnn .btn-text.overlay_h {
+  transform: translate(0,0%);
+}
+
+.hidden_btnnn {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.hidden_btnnn .btn-text.overlay_h {
+  position: absolute;
+  transform: translateY(101%);
+}
+.hidden_btnnn span {
+  display: block;
+  transition: transform 1s cubic-bezier(.23,1,.32,1);
+}
+
 .woocommerce button.button:disabled, 
 .woocommerce button.button:disabled[disabled], 
 .woocommerce button.button.alt, 
