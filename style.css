@@ -1039,7 +1039,6 @@ td {
 }
 .xptf-btn-dark:hover, .xptf-btn-dark:focus {
   color: #fff;
-  background: var(--primary-color);
 }
 
 .xptf-btn.xptf-btn-light {
@@ -1083,7 +1082,7 @@ td {
   transform: translate(0,-101%);
 }
 .xptf-btn:hover .hidden_btnnn .btn-text.overlay_h {
-  transform: translate(0,0%);
+  
 }
 
 .hidden_btnnn {
@@ -1094,7 +1093,6 @@ td {
 
 .hidden_btnnn .btn-text.overlay_h {
   position: absolute;
-  transform: translateY(101%);
 }
 .hidden_btnnn span {
   display: block;
