@@ -235,8 +235,6 @@
                 autoplayTimeout: $time,
                 loop:$loop,
                 responsiveClass:true,
-                animateOut: 'zoomOut',
-                animateIn: 'zoomIn',
                 margin:30,
                 items:1,
                 dots:$dots,
