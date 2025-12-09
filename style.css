@@ -1093,6 +1093,7 @@ td {
 
 .hidden_btnnn .btn-text.overlay_h {
   position: absolute;
+  width: 100%;
 }
 .hidden_btnnn span {
   display: block;
@@ -2008,12 +2009,12 @@ Vertical Menu
 
 .vertical-services-menu li:hover, 
 .vertical-services-menu .current-menu-item {
-    background-color: rgba(0,174,108,0.05);
+    background-color: var(--accent-color);
 }
 
 .vertical-services-menu a:hover, 
 .vertical-services-menu .current-menu-item a {
-    color: var(--primary-color);
+    color: #fff;
     padding-left: 20px;
     padding-right: 20px;
 }
