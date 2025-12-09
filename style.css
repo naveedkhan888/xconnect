@@ -5512,20 +5512,20 @@ object {
   z-index: 1;
 }
 .project-slider .projects-box .portfolio-info h5 {
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-size: 30px;
   font-weight: 600;
 }
 
 
 .project-slider .projects-box .portfolio-info h5 a {
-  color: #1a1b1e;
-  background: #fff;
-  padding: 5px 20px;
+  color: #ffffff;
+  padding: 0;
   transform: translateX(-101%);
   transition: all 0.3s ease;
   display: inline-block;
-  border-radius: 15px;
+  border-radius: 0;
+  font-weight: 700;
 }
 
 .project-slider .projects-box:hover .portfolio-info h5 a {
@@ -5545,24 +5545,27 @@ object {
   margin-bottom: 0;
 }
 .project-slider .projects-box .portfolio-info .portfolio-cates a {
-  color: #1a1b1e;
+  color: #ffffff;
   line-height: 1;
   display: inline;
-  padding: 5px 20px;
-  background: #fff;
+  padding:0;
   display: inline-block;
   transform: translateX(-101%);
   transition: all 0.3s ease;
   transition-delay: 50ms;
   transition-duration: 0.3s;
-  border-radius: 15px;
+  border-radius: 0;
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(0deg,#e9e9e9,#f5f5f5);
 }
 .project-slider .projects-box:hover .portfolio-info .portfolio-cates a {
   transform: translateX(0);
   transition: all 0.5s ease 50ms;
 }
 .project-slider .projects-box .portfolio-info .portfolio-cates a:hover {
-  
+  background-size: 100% 1px;
 }
 .project-slider .projects-box .portfolio-info .portfolio-cates span:first-child {
   display: none;
