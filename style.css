@@ -5212,7 +5212,7 @@ object {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgba(254, 132, 35, 0.9);
+  background: color-mix(in srgb, var(--primary-color) 90%, transparent);
   opacity: 0;
   display: flex;
   align-items: center;
@@ -5359,7 +5359,7 @@ object {
   position: relative;
 }
 .projects-grid.style-3 .projects-thumbnail .overlay {
-  background: rgba(254, 132, 35, 0.9);
+  background: color-mix(in srgb, var(--primary-color) 90%, transparent);
   opacity: 0;
   visibility: hidden;
   z-index: 1;
@@ -5977,7 +5977,7 @@ object {
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(254, 132, 35, 0.8);
+  background: color-mix(in srgb, var(--primary-color) 80%, transparent);
   opacity: 0;
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
