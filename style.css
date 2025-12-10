@@ -4921,7 +4921,7 @@ object {
   margin-bottom: 0;
   text-transform: uppercase;
   color: #fff;
-  background: #262832;
+  background: var(--accent-color);
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
   border-radius: 14px;
@@ -4987,14 +4987,14 @@ object {
   font-family: "xpcustomicon";
   font-size: 13px;
   right: 0;
-  color: #d92300;
+  color: var(--accent-color);
 }
 .xp-pricing-table .inner-table .details ul li.active {
   color: #282828;
 }
 .xp-pricing-table .inner-table .details ul li.active:after {
   content: "\f126";
-  color: #69c47e;
+  color: var(--primary-color);
   font-size: 14px;
 }
 .xp-pricing-table .inner-table .details.no-icon ul li:after {
