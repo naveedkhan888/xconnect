@@ -678,6 +678,7 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 		}
 		.xp-google-review-wrapper .google-review-inline .text {
 		  line-height: 1;
+		  opacity: 0.85;
 		}
 		.xp-google-review-wrapper .google-review-inline .flexieitem {
 		  display: flex;
@@ -689,7 +690,7 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 			align-items: center;
 		}
 		.xp-google-review-wrapper .google-review-boxed .rating {
-			font-weight: 800;
+			font-weight: 700;
 			line-height: 1;
 			font-size: 44px;
 		}
