@@ -55,7 +55,13 @@ body[class*="elementor-kit"] {
   --e-global-color-secondary: var(--secondary-color);
   --e-global-color-text: var(--text-color);
   --e-global-color-accent:var(--accent-color);
-  --e-global-typography-accent-font-family: "Roboto";
+  /* Body font */
+  --e-global-typography-text-font-family: var(--font-body);
+  --e-global-typography-primary-font-family: var(--font-body);
+
+  /* Second / Heading font */
+  --e-global-typography-secondary-font-family: var(--font-second);
+  --e-global-typography-accent-font-family: var(--font-second);
 }
 
 html {
