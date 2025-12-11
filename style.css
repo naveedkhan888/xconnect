@@ -57,7 +57,7 @@ body[class*="elementor-kit"] {
   --e-global-color-accent:var(--accent-color);
   /* Body font */
   --e-global-typography-text-font-family: var(--font-body);
-  --e-global-typography-primary-font-family: var(--font-body);
+  --e-global-typography-primary-font-family: var(--font-second);
 
   /* Second / Heading font */
   --e-global-typography-secondary-font-family: var(--font-second);
