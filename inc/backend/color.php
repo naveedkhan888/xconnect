@@ -34,7 +34,7 @@ if(!function_exists('xconnect_color_scheme')){
 		    --secondary-color: {$secondary_color};
 		    --text-color: {$text_color};
 		    --accent-color: {$accent_color};
-		    --heading_color: {$heading_color};
+		    --heading-color: {$heading_color};
 		    --white-color: {$white_color};
 		    --divider-color: {$divider_color};
 		    --dark-divider-color: {$dark_divider_color};
