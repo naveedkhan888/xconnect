@@ -67,7 +67,7 @@ if (!function_exists('xconnect_body_font')) {
     function xconnect_body_font() {
 
         $body_typo = xconnect_get_option('body_typo', []);
-        $body_font_family = !empty($body_typo['font-family']) ? $body_typo['font-family'] : 'Inter';
+        $body_font_family = !empty($body_typo['font-family']) ? $body_typo['font-family'] : 'Open Sans';
 
         $css = "
         :root {
@@ -86,7 +86,7 @@ if (!function_exists('xconnect_second_font')) {
     function xconnect_second_font() {
 
         $second_font = xconnect_get_option('second_font', []);
-        $second_font_family = !empty($second_font['font-family']) ? $second_font['font-family'] : 'Belleza';
+        $second_font_family = !empty($second_font['font-family']) ? $second_font['font-family'] : 'DM Sans';
 
         $css = "
         :root {
