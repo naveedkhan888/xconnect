@@ -4286,7 +4286,8 @@ object {
 /*--------------------------------------------------------------
 ## Image Box
 --------------------------------------------------------------*/
-.border_radious_image img {
+.border_radious_image img, 
+.border_radious_image .qodef-e-inner {
   border-radius: 15px !important;
 }
 .image-box-price .price-box {
