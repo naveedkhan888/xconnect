@@ -11,7 +11,7 @@ if(!function_exists('xconnect_color_scheme')){
 		$secondary_color    = xconnect_get_option('secondary_color', '#f6f6f6');
 		$text_color         = xconnect_get_option('text_color', '#6c6d6f');
 		$accent_color       = xconnect_get_option('accent_color', '#3b3b5b');
-		$bg_color           = xconnect_get_option('bg_color', '#f4efef');
+		$heading_color      = xconnect_get_option('heading_color', '#f4efef');
 		$white_color        = xconnect_get_option('white_color', '#FFFFFF');
 		$divider_color      = xconnect_get_option('divider_color', '#FFFFFF14');
 		$dark_divider_color = xconnect_get_option('dark_divider_color', '#3835373b'); // example fallback
@@ -22,7 +22,7 @@ if(!function_exists('xconnect_color_scheme')){
         $secondary_color    = !empty($secondary_color) ? $secondary_color : '#f6f6f6';
         $text_color         = !empty($text_color) ? $text_color : '#6c6d6f';
         $accent_color       = !empty($accent_color) ? $accent_color : '#3b3b5b';
-        $bg_color           = !empty($bg_color) ? $bg_color : '#f4efef';
+        $heading_color      = !empty($heading_color) ? $heading_color : '#f4efef';
         $white_color        = !empty($white_color) ? $white_color : '#FFFFFF';
         $divider_color      = !empty($divider_color) ? $divider_color : '#FFFFFF14';
         $dark_divider_color = !empty($dark_divider_color) ? $dark_divider_color : '#3835373b';
@@ -34,7 +34,7 @@ if(!function_exists('xconnect_color_scheme')){
 		    --secondary-color: {$secondary_color};
 		    --text-color: {$text_color};
 		    --accent-color: {$accent_color};
-		    --bg-color: {$bg_color};
+		    --heading_color: {$heading_color};
 		    --white-color: {$white_color};
 		    --divider-color: {$divider_color};
 		    --dark-divider-color: {$dark_divider_color};

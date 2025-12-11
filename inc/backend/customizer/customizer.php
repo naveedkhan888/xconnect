@@ -1117,9 +1117,9 @@ function xconnect_customize_settings() {
             'priority' => 10,
         ),
 
-        'bg_color' => array(
+        'heading_color' => array(
             'type'     => 'color',
-            'label'    => esc_html__( 'Background Color', 'xconnect' ),
+            'label'    => esc_html__( 'Heading Color', 'xconnect' ),
             'section'  => 'color_scheme',
             'default'  => '#f4efef',
             'priority' => 10,
