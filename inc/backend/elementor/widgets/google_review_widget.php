@@ -655,9 +655,14 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 		</div>
 
 		<style>
+		.xp-google-review-wrapper {
+			  align-items: center;
+			  display: flex;
+			}
 		.xp-google-review-wrapper .google-review-inline {
 			display: inline-flex;
 			align-items: center;
+			gap: 10px;
 		}
 		.xp-google-review-wrapper .google-review-inline .flex_ittmm {
 			display: inline-flex;
@@ -671,6 +676,14 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 		.xp-google-review-wrapper .google-review-inline .stars {
 			line-height: 1;
 		}
+		.xp-google-review-wrapper .google-review-inline .text {
+		  line-height: 1;
+		}
+		.xp-google-review-wrapper .google-review-inline .flexieitem {
+		  display: flex;
+  		  flex-flow: column;
+		  gap: 4px;
+		}
 		.xp-google-review-wrapper .google-review-boxed {
 			display: inline-flex;
 			align-items: center;
@@ -678,12 +691,15 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 		.xp-google-review-wrapper .google-review-boxed .rating {
 			font-weight: 800;
 			line-height: 1;
+			font-size: 44px;
 		}
 		.xp-google-review-wrapper .google-review-boxed .stars {
-			margin-bottom: 0;
+			margin-bottom: 4px;
+			line-height: 1;
 		}
 		.xp-google-review-wrapper .google-review-boxed .meta {
 			opacity: 0.85;
+			line-height: 1;
 		}
 		</style>
 		<?php
@@ -722,7 +738,7 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 					<# if ( settings.google_logo.url ) { #>
 						<img src="{{{ settings.google_logo.url }}}" alt="Google">
 					<# } #>
-					<div>
+					<div class="flexieitem">
 						<div class="flex_ittmm">
 							<div class="rating">{{{ rating.toFixed(1) }}}</div>
 							<div class="stars">{{{ starsHtml }}}</div>
