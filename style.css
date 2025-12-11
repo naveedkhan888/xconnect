@@ -3508,6 +3508,24 @@ Vertical Menu
   border-radius: 15px;
 }
 
+.qodef-qi-text-marquee.qodef-text-stroke-effect .qodef-m-text-item {
+  -webkit-text-stroke-color: var(--accent-color); 
+  background: linear-gradient(
+    to right,
+    var(--accent-color) 0%,
+    var(--accent-color) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: background-position 0.6s ease;
+}
+.qodef-qi-text-marquee.qodef-text-stroke-effect .qodef-m-text-item:hover {
+  background-position: 0 0;
+}
 /*--------------------------------------------------------------
 ## Responsive Blog
 --------------------------------------------------------------*/
