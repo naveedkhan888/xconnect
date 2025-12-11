@@ -47,3 +47,4 @@ locate_template('/inc/backend/elementor/widgets/new_widget.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget2.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget3.php', true, true);
 locate_template('/inc/backend/elementor/widgets/new_widget4.php', true, true);
+locate_template('/inc/backend/elementor/widgets/google_review_widget.php', true, true);
