@@ -2112,7 +2112,7 @@ Vertical Menu
 }
 .page-header .breadcrumbs li {
   display: inline-block;
-  color: #fff;
+  color: var(--accent-color);
 }
 .page-header .breadcrumbs li:before {
   content: "\f124";

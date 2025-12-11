@@ -437,6 +437,10 @@ function xconnect_customize_settings() {
             'label'    => esc_html__( 'Background Color', 'xconnect' ),
             'section'  => 'page_header',
             'priority' => 10,
+            'default'  => '',
+		    'choices'  => array(
+		        'alpha' => true,
+		    ),
             'output'    => array(
                 array(
                     'element'  => '.page-header',
@@ -456,6 +460,10 @@ function xconnect_customize_settings() {
             'label'    => esc_html__( 'Title Color', 'xconnect' ),
             'section'  => 'page_header',
             'priority' => 10,
+            'default'  => '',
+		    'choices'  => array(
+		        'alpha' => true,
+		    ),
             'output'    => array(
                 array(
                     'element'  => '.page-header .page-title',
@@ -475,6 +483,10 @@ function xconnect_customize_settings() {
             'label'    => esc_html__( 'Breadcrumbs Color', 'xconnect' ),
             'section'  => 'page_header',
             'priority' => 10,
+            'default'  => '',
+		    'choices'  => array(
+		        'alpha' => true,
+		    ),
             'output'    => array(
                 array(
                     'element'  => '.page-header .breadcrumbs li, .page-header .breadcrumbs li a, .page-header .breadcrumbs li a:hover, .page-header .breadcrumbs li:before',
