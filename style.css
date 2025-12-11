@@ -3521,7 +3521,7 @@ Vertical Menu
   background-position: 100% 0;
   -webkit-background-clip: text;
   background-clip: text;
-  transition: background-position 0.6s ease;
+  transition: background-position 1s ease;
 }
 .qodef-qi-text-marquee.qodef-text-stroke-effect .qodef-m-text-item:hover {
   background-position: 0 0;
