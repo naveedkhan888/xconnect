@@ -632,7 +632,7 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 					<?php if ( ! empty( $settings['google_logo']['url'] ) ) : ?>
 						<img src="<?php echo esc_url( $settings['google_logo']['url'] ); ?>" alt="Google">
 					<?php endif; ?>
-					<div>
+					<div class="flexieitem">
 						<div class="flex_ittmm">
 							<div class="rating"><?php echo number_format( $rating, 1 ); ?></div>
 							<div class="stars"><?php echo $stars_html; ?></div>
