@@ -1105,7 +1105,7 @@ function xconnect_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Text Color', 'xconnect' ),
             'section'  => 'color_scheme',
-            'default'  => '#6c6d6f',
+            'default'  => '#000000BF',
             'priority' => 10,
         ),
 
