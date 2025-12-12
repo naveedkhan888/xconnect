@@ -63,7 +63,7 @@ $(window).on("scroll", function () {
     /* --------------------------------------------------
      * 1. Sync new class with sticky logic exactly
      * --------------------------------------------------*/
-    if (stickyActive) {
+    if (currentScroll) {
         $('.site-header').addClass('header-active');
     } else {
         $('.site-header').removeClass('header-active');
