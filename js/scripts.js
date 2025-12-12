@@ -41,35 +41,48 @@
 	};
 
     /* --------------------------------------------------
-    * sticky header
-    * --------------------------------------------------*/
-	// Append a clone of the header for spacing adjustment
-    $('.header-static .is-fixed').parent().append('<div class="header-clone"></div>');
-    
-    // Set the height of the header clone to match the fixed header
-    $('.header-clone').height($('#site-header .is-fixed').outerHeight());
-    $('.header-static .header-clone').hide();
+ * sticky header + unified scroll state class
+ * --------------------------------------------------*/
 
-    let previousScroll = 0; // Store the previous scroll position
+// Append clone
+$('.header-static .is-fixed').parent().append('<div class="header-clone"></div>');
+$('.header-clone').height($('#site-header .is-fixed').outerHeight());
+$('.header-static .header-clone').hide();
 
-    // Scroll event listener
-    $(window).on("scroll", function() {
-        var currentScroll = $(window).scrollTop(); // Current scroll position
-        var site_header = $('#site-header').outerHeight(); // Header height
-        
-        if (currentScroll > site_header && currentScroll < previousScroll) {
-            // Scrolling up: Add sticky class and show header clone
-            $('.site-header .is-fixed').addClass('is-stuck');
-            $('.header-static .header-clone').show();
-        } else if (currentScroll <= site_header || currentScroll > previousScroll) {
-            // Scrolling down or above the header: Remove sticky class and hide header clone
-            $('.site-header .is-fixed').removeClass('is-stuck');
-            $('.header-static .header-clone').hide();
-        }
+let previousScroll = 0;
 
-        // Update the previous scroll position
-        previousScroll = currentScroll;
-    });
+$(window).on("scroll", function () {
+
+    var currentScroll  = $(this).scrollTop();
+    var headerHeight   = $('#site-header').outerHeight();
+    var headerElement  = $('.site-header .is-fixed');
+
+    // CONDITION: sticky should be active
+    var stickyActive = (currentScroll > headerHeight && currentScroll < previousScroll);
+
+    /* --------------------------------------------------
+     * 1. Sync new class with sticky logic exactly
+     * --------------------------------------------------*/
+    if (stickyActive) {
+        $('.site-header').addClass('header-active');
+    } else {
+        $('.site-header').removeClass('header-active');
+    }
+
+    /* --------------------------------------------------
+     * 2. Existing sticky show/hide logic
+     * --------------------------------------------------*/
+    if (stickyActive) {
+        headerElement.addClass('is-stuck');
+        $('.header-static .header-clone').show();
+    } else {
+        headerElement.removeClass('is-stuck');
+        $('.header-static .header-clone').hide();
+    }
+
+    previousScroll = currentScroll;
+});
+
 
     /* --------------------------------------------------
     * mobile menu
