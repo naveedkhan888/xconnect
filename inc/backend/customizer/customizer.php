@@ -458,7 +458,7 @@ function xconnect_customize_settings() {
             'priority' => 10,
             'output'    => array(
                 array(
-                    'element'  => '.page-header .page-title',
+                    'element'  => '',
                     'property' => 'color'
                 ),
             ),
@@ -470,46 +470,30 @@ function xconnect_customize_settings() {
                 ),
             ),
         ),
-        'bread_color' => array(
-		    'type'     => 'color',
-		    'label'    => esc_html__( 'Breadcrumbs Color', 'xconnect' ),
-		    'section'  => 'page_header',
-		    'priority' => 10,
-		    'default'  => '',
-		    'transport' => 'postMessage',
-		    'output'    => array(
-		        array(
-		            'element'  => '.page-header .breadcrumbs li, 
-		                           .page-header .breadcrumbs li a, 
-		                           .page-header .breadcrumbs li a:hover, 
-		                           .page-header .breadcrumbs li:before',
-		            'property' => 'color',
-		        ),
-		    ),
-		    'js_vars' => array(
-		        array(
-		            'element'  => '.page-header .breadcrumbs li, 
-		                           .page-header .breadcrumbs li a, 
-		                           .page-header .breadcrumbs li a:hover, 
-		                           .page-header .breadcrumbs li:before',
-		            'function' => 'css',
-		            'property' => 'color',
-		        ),
-		    ),
-		    'active_callback' => array(
-		        array(
-		            'setting'  => 'pheader_switch',
-		            'operator' => '==',
-		            'value'    => 1,
-		        ),
-		        array(
-		            'setting'  => 'breadcrumbs',
-		            'operator' => '==',
-		            'value'    => 1,
-		        ),
-		    ),
-		),
-
+        'bread_color'    => array(
+            'type'     => 'color',
+            'label'    => esc_html__( 'Breadcrumbs Color', 'xconnect' ),
+            'section'  => 'page_header',
+            'priority' => 10,
+            'output'    => array(
+                array(
+                    'element'  => '',
+                    'property' => 'color'
+                ),
+            ),
+            'active_callback' => array(
+                array(
+                    'setting'  => 'pheader_switch',
+                    'operator' => '==',
+                    'value'    => 1,
+                ),
+                array(
+                    'setting'  => 'breadcrumbs',
+                    'operator' => '==',
+                    'value'    => 1,
+                ),
+            ),
+        ),
         'pheader_height'  => array(
             'type'     => 'dimensions',
             'label'    => esc_html__( 'Page Header Height (Ex: 300px)', 'xconnect' ),
