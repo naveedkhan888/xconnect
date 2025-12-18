@@ -12,123 +12,52 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 class xConnect_Customize {
-	/**
-	 * Customize settings
-	 *
-	 * @var array
-	 */
-	protected $config = array();
 
-	/**
-	 * The class constructor
-	 *
-	 * @param array $config
-	 */
-	public function __construct( $config ) {
+    protected $config = array();
+
+    public function __construct( $config ) {
         $this->config = $config;
 
-        // Move Kirki initialization to init hook
-        add_action('init', array($this, 'init_kirki'));
+        if ( class_exists( 'Kirki' ) ) {
+            $this->register();
+        }
     }
 
-    /**
-     * Initialize Kirki
-     */
-    public function init_kirki() {
-        if ( ! class_exists( 'Kirki' ) ) {
-            return;
+    public function register() {
+
+        if ( ! empty( $this->config['theme'] ) ) {
+            Kirki::add_config(
+                $this->config['theme'],
+                array(
+                    'capability'  => 'edit_theme_options',
+                    'option_type' => 'theme_mod',
+                )
+            );
         }
 
-        $this->register();
+        if ( ! empty( $this->config['panels'] ) ) {
+            foreach ( $this->config['panels'] as $panel => $settings ) {
+                Kirki::add_panel( $panel, $settings );
+            }
+        }
+
+        if ( ! empty( $this->config['sections'] ) ) {
+            foreach ( $this->config['sections'] as $section => $settings ) {
+                Kirki::add_section( $section, $settings );
+            }
+        }
+
+        if ( ! empty( $this->config['fields'] ) ) {
+            foreach ( $this->config['fields'] as $name => $settings ) {
+                if ( ! isset( $settings['settings'] ) ) {
+                    $settings['settings'] = $name;
+                }
+                Kirki::add_field( $this->config['theme'], $settings );
+            }
+        }
     }
-
-	/**
-	 * Register settings
-	 */
-	public function register() {
-
-		/**
-		 * Add the theme configuration
-		 */
-		if ( ! empty( $this->config['theme'] ) ) {
-			Kirki::add_config(
-				$this->config['theme'], array(
-					'capability'  => 'edit_theme_options',
-					'option_type' => 'theme_mod',
-				)
-			);
-		}
-
-		/**
-		 * Add panels
-		 */
-		if ( ! empty( $this->config['panels'] ) ) {
-			foreach ( $this->config['panels'] as $panel => $settings ) {
-				Kirki::add_panel( $panel, $settings );
-			}
-		}
-
-		/**
-		 * Add sections
-		 */
-		if ( ! empty( $this->config['sections'] ) ) {
-			foreach ( $this->config['sections'] as $section => $settings ) {
-				Kirki::add_section( $section, $settings );
-			}
-		}
-
-		/**
-		 * Add fields
-		 */
-		if ( ! empty( $this->config['theme'] ) && ! empty( $this->config['fields'] ) ) {
-			foreach ( $this->config['fields'] as $name => $settings ) {
-				if ( ! isset( $settings['settings'] ) ) {
-					$settings['settings'] = $name;
-				}
-
-				Kirki::add_field( $this->config['theme'], $settings );
-			}
-		}
-	}
-
-	/**
-	 * Get config ID
-	 *
-	 * @return string
-	 */
-	public function get_theme() {
-		return $this->config['theme'];
-	}
-
-	/**
-	 * Get customize setting value
-	 *
-	 * @param string $name
-	 *
-	 * @return bool|string
-	 */
-	public function get_option( $name ) {
-
-		$default = $this->get_option_default( $name );
-
-		return get_theme_mod( $name, $default );
-	}
-
-	/**
-	 * Get default option values
-	 *
-	 * @param $name
-	 *
-	 * @return mixed
-	 */
-	public function get_option_default( $name ) {
-		if ( ! isset( $this->config['fields'][ $name ] ) ) {
-			return false;
-		}
-
-		return isset( $this->config['fields'][ $name ]['default'] ) ? $this->config['fields'][ $name ]['default'] : false;
-	}
 }
+
 
 /**
  * This is a short hand function for getting setting value from customizer
@@ -1172,3 +1101,4 @@ function xconnect_init_customizer() {
     $xconnect_customize = new xConnect_Customize( xconnect_customize_settings() );
 }
 add_action( 'customize_register', 'xconnect_init_customizer', 5 );
+
