@@ -10,12 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Add hook to load Kirki textdomain at the correct time
-add_action('after_setup_theme', function() {
-    if (class_exists('Kirki')) {
-        load_textdomain('kirki', get_template_directory() . '/languages/kirki.mo');
-    }
-}, 20);
 
 class xConnect_Customize {
 	/**
@@ -1177,4 +1171,4 @@ function xconnect_init_customizer() {
 
     $xconnect_customize = new xConnect_Customize( xconnect_customize_settings() );
 }
-add_action( 'init', 'xconnect_init_customizer', 20 );
+add_action( 'customize_register', 'xconnect_init_customizer', 5 );
