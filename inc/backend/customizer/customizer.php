@@ -1100,5 +1100,5 @@ function xconnect_init_customizer() {
 
     $xconnect_customize = new xConnect_Customize( xconnect_customize_settings() );
 }
-add_action( 'customize_register', 'xconnect_init_customizer', 5 );
+add_action( 'after_setup_theme', 'xconnect_init_customizer', 5 );
 
