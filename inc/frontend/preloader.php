@@ -148,27 +148,49 @@ function preloader_customize_settings() {
 	return $settings;
 }
 
-$xconnect_customize = new xConnect_Customize( preloader_customize_settings() );
+function xconnect_init_preloader_customizer() {
+    global $xconnect_customize;
 
-if( xconnect_get_option('preload') != false ){
-
-    function xconnect_body_classes( $classes ) {
-
-    	$classes[] = 'royal_preloader';
-
-    	return $classes;
+    if ( ! class_exists( 'Kirki' ) ) {
+        return;
     }
-    add_filter( 'body_class', 'xconnect_body_classes' );
 
-    function xconnect_preload_body_open_script() {
-        echo '<div id="royal_preloader" data-width="'.xconnect_get_option('preload_logo_width').'" data-height="'.xconnect_get_option('preload_logo_height').'" data-url="'.xconnect_get_option('preload_logo').'" data-color="'.xconnect_get_option('preload_text_color').'" data-bgcolor="'.xconnect_get_option('preload_bgcolor').'"></div>';
-        
-    }
-    add_action( 'wp_body_open', 'xconnect_preload_body_open_script' );
-
-    function xconnect_preload_scripts() {
-    	wp_enqueue_style('xconnect-preload', get_template_directory_uri().'/css/royal-preload.css');
-    }
-    add_action( 'wp_enqueue_scripts', 'xconnect_preload_scripts' );
-
+    $xconnect_customize = new xConnect_Customize( preloader_customize_settings() );
 }
+add_action( 'init', 'xconnect_init_preloader_customizer', 20 );
+
+
+function xconnect_preloader_frontend_init() {
+
+    if ( ! function_exists( 'xconnect_get_option' ) ) {
+        return;
+    }
+
+    if ( ! xconnect_get_option( 'preload' ) ) {
+        return;
+    }
+
+    add_filter( 'body_class', function ( $classes ) {
+        $classes[] = 'royal_preloader';
+        return $classes;
+    } );
+
+    add_action( 'wp_body_open', function () {
+        echo '<div id="royal_preloader"
+            data-width="' . esc_attr( xconnect_get_option( 'preload_logo_width' ) ) . '"
+            data-height="' . esc_attr( xconnect_get_option( 'preload_logo_height' ) ) . '"
+            data-url="' . esc_url( xconnect_get_option( 'preload_logo' ) ) . '"
+            data-color="' . esc_attr( xconnect_get_option( 'preload_text_color' ) ) . '"
+            data-bgcolor="' . esc_attr( xconnect_get_option( 'preload_bgcolor' ) ) . '"></div>';
+    } );
+
+    add_action( 'wp_enqueue_scripts', function () {
+        wp_enqueue_style(
+            'xconnect-preload',
+            get_template_directory_uri() . '/css/royal-preload.css',
+            array(),
+            null
+        );
+    } );
+}
+add_action( 'wp', 'xconnect_preloader_frontend_init' );
