@@ -1168,4 +1168,13 @@ function xconnect_customize_settings() {
 	return $settings;
 }
 
-$xconnect_customize = new xConnect_Customize( xconnect_customize_settings() );
+function xconnect_init_customizer() {
+    global $xconnect_customize;
+
+    if ( ! class_exists( 'Kirki' ) ) {
+        return;
+    }
+
+    $xconnect_customize = new xConnect_Customize( xconnect_customize_settings() );
+}
+add_action( 'init', 'xconnect_init_customizer', 20 );
