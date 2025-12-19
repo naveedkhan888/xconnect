@@ -616,7 +616,9 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 						$hl = $settings['subtitle_style'];
 						$this->add_render_attribute( 'subtitle', 'class', $hl );
 					?>
-						<span <?php echo $this->get_render_attribute_string( 'subtitle' ); ?>><?php echo esc_html( $settings['sub'] ); ?></span>
+						<span <?php echo wp_kses_post( $this->get_render_attribute_string( 'subtitle' ) ); ?>>
+							<?php echo esc_html( $settings['sub'] ); ?>
+						</span>
 					<?php endif; ?>
 					
 					<?php if ( ! empty( $settings['title'] ) ) : 
