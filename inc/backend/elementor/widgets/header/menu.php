@@ -141,7 +141,7 @@ class xConnect_Menu extends Widget_Base{
 		$this->add_control(
 			'active_menu_color',
 			[
-				'label' => __('Active Menu Item Color', 'plugin-name'),
+				'label' => __('Active Menu Item Color', 'xconnect'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .menu-item.current-menu-item > a' => 'color: {{VALUE}};',

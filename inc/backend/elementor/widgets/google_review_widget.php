@@ -635,7 +635,7 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 					<div class="flexieitem">
 						<div class="flex_ittmm">
 							<div class="rating"><?php echo number_format( $rating, 1 ); ?></div>
-							<div class="stars"><?php echo $stars_html; ?></div>
+							<div class="stars"><?php echo wp_kses_post( $stars_html ); ?></div>
 						</div>
 						<div class="text"><?php echo esc_html( $settings['review_text'] ); ?></div>
 					</div>
@@ -647,7 +647,7 @@ class xConnect_Google_Review_Badge extends Widget_Base{
 					<?php endif; ?>
 					<div class="rating"><?php echo number_format( $rating, 1 ); ?></div>
 					<div>
-						<div class="stars"><?php echo $stars_html; ?></div>
+						<div class="stars"><?php echo wp_kses_post( $stars_html ); ?></div>
 						<div class="meta"><?php echo absint( $settings['review_count'] ); ?> reviews</div>
 					</div>
 				</div>
