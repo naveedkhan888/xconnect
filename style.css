@@ -1117,26 +1117,26 @@ td {
 }
 
 .main-form input::-webkit-input-placeholder { /* Chrome, Safari, Edge */
-  color: var(--heading-color);
+  color: var(--text-color);
   opacity: 1;
 }
 .main-form textarea::placeholder {
-  color: var(--heading-color);
+  color: var(--text-color);
   opacity: 1;
 }
 
 .main-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: var(--heading-color);
+  color: var(--text-color);
   opacity: 1;
 }
 
 .main-form input::-ms-input-placeholder { /* Microsoft Edge */
-  color: var(--heading-color);
+  color: var(--text-color);
   opacity: 1;
 }
 
 .main-form input::placeholder { /* Standard syntax */
-  color: var(--heading-color);
+  color: var(--text-color);
   opacity: 1;
 }
 
@@ -6100,7 +6100,7 @@ object {
   color: #fff;
 }
 .team-form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: var(--heading-color);
+  color: var(--text-color);
 }
 .team-form .xptf-btn {
   background: #fff;
@@ -6593,7 +6593,7 @@ object {
 .wpcf7 textarea {
   width: 100%;
   vertical-align: middle;
-  color: var(--heading-color);
+  color: var(--text-color);
   background: transparent;
 }
 .wpcf7 p {
@@ -6827,7 +6827,7 @@ object {
 .form_icon .main_wraper:focus-within textarea::placeholder,
 .form_icon .main_wraper:focus-within input.wpcf7-form-control::placeholder{
   opacity: 1;
-  color: var(--heading-color);
+  color: var(--text-color);
 }
 
 .form_icon .main_wraper:focus-within .bottom_line::before {
@@ -6900,7 +6900,7 @@ object {
 
 /* dark form css for the light theme   */
 .light_form .main_wraper i {
-    color: #65605c;
+    color: var(--primary-color);
 }
 
 .light_form .main_wraper textarea,
@@ -6909,7 +6909,7 @@ object {
 
 .light_form .main_wraper textarea::placeholder,
 .light_form .main_wraper input.wpcf7-form-control::placeholder {
-    color: var(--heading-color);
+    color: var(--text-color);
     opacity: 1;
 }
 
