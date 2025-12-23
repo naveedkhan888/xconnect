@@ -6922,7 +6922,7 @@ object {
 }
 
 .light_form .custom-checkbox {
-    color: #65605c;
+    color: var(--text-color);
 }
 
 .light_form .custom-checkbox .checkmark {
@@ -6931,14 +6931,14 @@ object {
 }
 
 .light_form .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
-    background-color: #65605c;
+    background-color: var(--primary-color);
 }
 
 .light_form .formcheckbox_link {
     color: #65605c;
 }
 .light_form .formcheckbox_link{
-  color: #000000 !important;
+  color: var(--text-color) !important;
 } 
 .light_form .formcheckbox_link:hover {
     color: #555555;
