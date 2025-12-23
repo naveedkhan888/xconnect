@@ -7401,6 +7401,10 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   }
 }
 @media (min-width: 768px) {
+  .container {
+    width: inherit;
+    max-width: 1024px;
+  }
   .elementor .elementor-section.elementor-section-boxed > .elementor-container {
     max-width: 750px;
   }
@@ -7410,6 +7414,10 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   }
 }
 @media (min-width: 992px) {
+  .container {
+    width: inherit;
+    max-width: 1300px;
+  }
   .elementor .elementor-section.elementor-section-boxed > .elementor-container {
     max-width: 970px;
   }
