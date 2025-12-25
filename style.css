@@ -978,6 +978,7 @@ td {
   background-color: #fff;
   width: 20px !important;
   height: 20px !important;
+  position: absolute;
 }
 
 .for_border_top_clip::after {
@@ -2336,7 +2337,6 @@ Vertical Menu
   position: relative;
   text-transform: uppercase;
   font-family: "DM Sans", sans-serif;
-  font-weight: 600;
   font-size: 13px;
   color: var(--primary-color);
   padding: 22px 40px;
@@ -2347,7 +2347,7 @@ Vertical Menu
   display: inline-block;
 }
 .post-box .entry-meta a {
-  color: #818181;
+  color: var(--text-color);
 }
 .post-box .entry-meta a:hover {
   color: var(--primary-color);
@@ -3196,7 +3196,7 @@ Vertical Menu
   margin: 0 -3px -10px;
 }
 .widget .tagcloud a {
-  color: #717171;
+  color: var(--text-color);
   background: #f5f5f5;
   font-size: 12px !important;
   font-family: "DM Sans", sans-serif;
@@ -3284,7 +3284,7 @@ Vertical Menu
 .widget-area .widget ul:not(.recent-news) > li .posts-count {
   font-size: 14px;
   font-weight: 600;
-  color: #8a8a8a;
+  color: var(--text-color);
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -3381,7 +3381,7 @@ Vertical Menu
   display: block;
   line-height: 1;
   text-transform: uppercase;
-  color: #9f9e9e;
+  color: var(--text-color);
 }
 
 .search-form {
@@ -3456,7 +3456,6 @@ Vertical Menu
   font-size: 14px;
   line-height: 28px;
   margin-bottom: 20px;
-  color: #9f9e9e;
 }
 .author-widget_wrapper:before {
   content: "";
