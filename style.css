@@ -989,6 +989,25 @@ td {
   position: absolute;
 }
 
+
+/* Floating Box */
+.float-pause-box {
+  /* Animation */
+  animation: floatX 6s ease-in-out infinite;
+}
+
+/* Pause on Hover */
+.float-pause-box:hover {
+  animation-play-state: paused;
+}
+
+/* Keyframes */
+@keyframes floatX {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(18px); }
+  100% { transform: translateX(0); }
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
